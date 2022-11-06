@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #111;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+}
+form{
+    padding: 60px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+
+}
+#corpo-form{
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 50px;
+}
+.f-container{
+    background-color: white;
+    border-radius: 4px;
+    padding: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: hidden;
+}
+.f-container p{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+}
+.f-container2{
+    background-color: white;
+    border-radius: 4px;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.inputRadio{
+    font-size: 1.4em;
+}
+
+.f-container-ft{
+    background-color: white;
+    border-radius: 4px;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+.inputs, .cpf_cnpj{
+    font-size: 1.3em;
+    padding: 15px 20px 5px 20px;
+    max-width: 350px;
+    width: 95%;
+    background: none;
+    border: none;
+    border-bottom: 1.5px solid #000;
+}
+input:focus-visible {
+    outline: none;
+}
+.valido {
+    border-bottom: 1px solid green;
+}
+.invalido {
+    border-bottom: 1px solid red;
+}
+h1{
+    font-size: 2.1em;
+    text-align: center;
+    padding: 10px;
+    max-width: 400 px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    font-size: 1.8em;
+}
+#continuar{
+    max-width: 200px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    font-size: 1.4em;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 10px #333;
+}
+#continuar:hover{
+    background-color: black;
+    color: white;
+    box-shadow: inset 0 0 10px #fff;
+}
+input[type="file"]{
+    display: none;
+}
+#ft{
+    padding: 10px;
+}
+#img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-repeat: round;
+    box-shadow: inset 0 0 10px #333;
+    border-radius: 4px;
+}
+#voltar{
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #888;
+    border-radius: 30px;
+}
+
+#footer {
+    background: #222;
+    color: #eee;
+    padding: 30px;
+    text-align: center;
+}
+
+#text-footer{
+    color: #eee;
+}
+
+/*caixa de texto descrição do trabalho*/
+.input-box {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .input-box textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    resize: none;
+    padding: 35px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    caret-color: #007bff;
+  }
+  .input-box textarea:focus,
+  .input-box textarea:valid {
+    border-color: #007bff;
+  }
+  .input-box.error textarea {
+    border-color: red;
+  }
+  .input-box textarea::placeholder{
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .input-box .title{
+      position: absolute;
+      top: 38px;
+      left: 45px;
+      color: #007bff;
+    }
+    .input-box.error .title{
+      color: red;
+    }
+    .input-box .characters{
+      position: absolute;
+      bottom: 35px;
+      right: 45px;
+      display: flex;
+      align-items: center;
+      color: #007bff;
+      display: none;
+    }
+    .input-box.active .characters{
+      display: block;
+    }
+    .input-box.error .characters{
+      color: red;
+    }
+
+@media (max-width: 900px){
+    *{
+        font-size: 1em;
+    }
+    form{
+        padding: 30px;
+    }
+    .f-container, .f-container-ft{
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputs, .cpf_cnpj{
+        width: 100%;
+    }
+}
