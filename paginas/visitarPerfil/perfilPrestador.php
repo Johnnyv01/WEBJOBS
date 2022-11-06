@@ -1,13 +1,13 @@
 <?php
     include('../connect.php');
 
-    $email = $GET['email'];
-    echo $email;
+    $retorno = $_GET['email'];
 
-    $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$email'";
+    $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$retorno'";
     
     $resultado = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($resultado);
+     
    
   
     ?>
@@ -56,28 +56,22 @@
                  
             <div class="profile-nav-info">
                 <h3 class="user-name">
-               
+               <?php 
+               echo $user_data['cdo_nomecompleto'] . "<br>";
+               ?>
 
                 </h3>
                 <div class="endereco">
                     <p class="estado">
                         <?php
-
-
-                       /* $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
-                        $result = $conexao->query($consulta);
-                        $user_data = mysqli_fetch_assoc($result);
-                        echo $user_data['cdo_uf'] . "<br>";*/
-
+                        echo $user_data['cdo_uf'] . "<br>";
                         ?>
                     </p>
                     <span class="pais">
 
                         <?php
-                       /* $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
-                        $result = $conexao->query($consulta);
-                        $user_data = mysqli_fetch_assoc($result);
-                        echo $user_data['cdo_cidade'] . "<br>";*/
+                      
+                        echo $user_data['cdo_cidade'] . "<br>";
                         ?>
 
                     </span>
@@ -90,20 +84,15 @@
                 <div class="profile-side">
                     <p class="mobile-no"><i class="fa fa-phone"></i>
                         <?php
-                      /*  $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
-                        $result = $conexao->query($consulta);
-                        $user_data = mysqli_fetch_assoc($result);
-                        echo $user_data['cdo_telefone'] . "<br>";*/
+                        echo $user_data['cdo_telefone'] . "<br>"
                         ?>
 
                     </p>
                     <p class="user-mail"><i class="fa fa-envelope"></i>
 
                         <?php
-                     /*   $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
-                        $result = $conexao->query($consulta);
-                        $user_data = mysqli_fetch_assoc($result);
-                        echo $user_data['cdo_email'] . "<br>";*/
+                    
+                        echo $user_data['cdo_email'] . "<br>";
                         ?>
 
                     </p>
@@ -111,10 +100,7 @@
                         <h3>Bio</h3>
                         <p class="bio">
                             <?php
-                          /*  $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
-                            $result = $conexao->query($consulta);
-                            $user_data = mysqli_fetch_assoc($result);
-                            echo $user_data['cdo_habilidades'] . "<br>";*/
+                            echo $user_data['cdo_habilidades'] . "<br>"
                             ?>
                         </p>
                     </div>

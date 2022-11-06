@@ -45,8 +45,10 @@ if (!isset($_GET['cdo_profissao'])) {
 </head>
 
 <body>
+
     <br><br>
     <?php while ($dadoss = $sql_query->fetch_assoc()) : ?>
+        
         <div class="container-fluid well span6">
             <div class="row-fluid">
 
@@ -59,7 +61,6 @@ if (!isset($_GET['cdo_profissao'])) {
 
                         <?php
                         echo $dadoss['cdo_nomecompleto'] . "<br>";
-                        $email = $dadoss['cdo_email'];
                         ?>
 
                     </h3>
@@ -70,15 +71,16 @@ if (!isset($_GET['cdo_profissao'])) {
                         ?>
                     </h6>
                     <h6>Avaliação: Sem Avaliações</h6>
-                    <p class="resumo-card"> <?php
-                                            echo $dadoss['cdo_habilidades'] . "<br>";
-                                            ?> <a href="#">More... </a></p>
+                    <p class="resumo-card"> 
+                        <?php
+                          echo $dadoss['cdo_habilidades'] . "<br>";
+                          ?> <a href="#">More... </a></p>
                 </div>
 
                 <div class="span2">
                     <div class="btn-group">
-
-                        <a href='../visitarPerfil/perfilPrestador.php?email=<?php $email . "<br>"?>' class="btn btn-primary">Visitar Perfil</a> -->
+                            
+                        <a href='../visitarPerfil/perfilPrestador.php?email=<?php echo $dadoss['cdo_email']?>' class="btn btn-primary">Visitar Perfil</a> -->
 
                     </div>
                 </div>

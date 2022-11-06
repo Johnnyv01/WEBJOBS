@@ -36,7 +36,8 @@ if (!isset($_SESSION['cdo_email'])) {
 
         req.open('GET','chat.php', true);
         req.send();
-    }
+    } 
+
     setInterval(function(){ajax();}, 1000);
     </script>
     
@@ -53,7 +54,7 @@ if (!isset($_SESSION['cdo_email'])) {
         
         </div>
 
-        <form method="POST" action=""> 
+        <form method="POST"> 
            
             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>    
             <input type="submit" name="enviar" value="Enviar">

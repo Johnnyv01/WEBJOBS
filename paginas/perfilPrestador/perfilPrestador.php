@@ -82,7 +82,24 @@ if (isset($_FILES['arquivos'])) {
 
 $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 ?>
-<script type="text/javascript">
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/perfilPrestador.css">
+    <link href="https://fonts.googleapis.com/css2?family=
+    Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../chat/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
     function ajax() {
         var req = new XMLHttpRequest();
         req.onreadystatechange = function() {
@@ -92,28 +109,13 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
             }
         }
 
-        // req.open('GET', 'chat.php', true);
-        //req.send();
+         req.open('GET', '../chat/chat.php', true);
+        req.send();
     }
     setInterval(function() {
         ajax();
     }, 1000);
 </script>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/perfilPrestador.css">
-    <link rel="stylesheet" href="fontawesome-6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../chat/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
     <title>Perfil</title>
 </head>
 
@@ -314,7 +316,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
                                         </div>
 
-                                        <form method="POST" action="perfilPrestador.php">
+                                        <form method="POST" action="">
                                              
                                             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
                                             <input type="submit" name="enviar" value="Enviar">
