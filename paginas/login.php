@@ -53,7 +53,6 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
                     <li><a href="sobrenos.php"> Sobre Nós </a></li>
                     <li><a href="servicos.php"> Serviços </a></li>
                     <li><a href="login.php">Entrar </a></li>
-                    <li><a href="logout.php">Sair </a></li>
                 </ul>
             </div>
         </nav>

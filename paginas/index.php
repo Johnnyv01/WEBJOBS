@@ -32,7 +32,7 @@
             <ul id="navbar-items">
                 <li><a href="sobrenos.php"> Sobre Nós </a></li>
                 <li><a href="servicos.php"> Serviços </a></li>
-                <li><a href="login.php">Entrar </a></li>
+                <li><a href="login.php">Entrar</a></li>
             </ul>
         </div>
     </nav>
