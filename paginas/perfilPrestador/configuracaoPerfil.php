@@ -4,17 +4,16 @@ include('../connect.php');
 session_start();
 
 
-if (!isset($_SESSION['cdo_email'])) {
+if (!isset($_SESSION['cdo_id'])) {
     header("Location: ../login.php?erro=true");
     exit;
-} else if (isset($_SESSION['cdo_email'])) {
-    $dados = $_SESSION['cdo_email'];
-    $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
+} else if (isset($_SESSION['cdo_id'])) {
+    $dados = $_SESSION['cdo_id'];
+    $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

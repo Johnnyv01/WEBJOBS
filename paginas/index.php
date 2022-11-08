@@ -28,7 +28,7 @@
 
     <nav id="navbar">
         <div id="navbar-container">
-            <h1 class="logo"> WEB JOBS</h1>
+            <h3 class="logo"> WEB JOBS</h3>
             <ul id="navbar-items">
                 <li><a href="sobrenos.php"> Sobre Nós </a></li>
                 <li><a href="servicos.php"> Serviços </a></li>

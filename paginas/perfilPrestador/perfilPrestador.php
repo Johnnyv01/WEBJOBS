@@ -4,12 +4,12 @@ include("../connect.php");
 
 session_start();
 
-if (!isset($_SESSION['cdo_email'])) {
+if (!isset($_SESSION['cdo_id'])) {
     header("Location: ../login.php?erro=true");
     exit;
-} else if (isset($_SESSION['cdo_email'])) {
-    $dados = $_SESSION['cdo_email'];
-    $consulta = "SELECT * FROM CADASTRO WHERE cdo_email = '$dados'";
+} else if (isset($_SESSION['cdo_id'])) {
+    $dados = $_SESSION['cdo_id'];
+    $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
 }
@@ -96,30 +96,30 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script type="text/javascript">
-     $(window).bind("beforeunload", function() {
-       if ($("#myModal").is(":visible")) {
-           return "Você não salvou a sua tarefa, gostaria mesmo de sair?";
-       }
-    });
+        $(window).bind("beforeunload", function() {
+            if ($("#myModal").is(":visible")) {
+                return "Você não salvou a sua tarefa, gostaria mesmo de sair?";
+            }
+        });
     </script>
 
     <script type="text/javascript">
-    function ajax() {
-        var req = new XMLHttpRequest();
-        req.onreadystatechange = function() {
-            if (req.readyState == 4 && req.status == 200) {
-                document.getElementById('chat').innerHTML =
-                    req.responseText;
+        function ajax() {
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function() {
+                if (req.readyState == 4 && req.status == 200) {
+                    document.getElementById('chat').innerHTML =
+                        req.responseText;
+                }
             }
-        }
 
-         req.open('GET', '../chat/chat.php', true);
-        req.send();
-    }
-    setInterval(function() {
-        ajax();
-    }, 1000);
-</script>
+            req.open('GET', '../chat/chat.php', true);
+            req.send();
+        }
+        setInterval(function() {
+            ajax();
+        }, 1000);
+    </script>
     <title>Perfil</title>
 </head>
 
@@ -132,18 +132,26 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                 <li><a href="sobrenos.php"> Sobre Nós </a></li>
                 <li><a href="servicos.php"> Serviços </a></li>
                 <li><a href="login.php">Entrar </a></li>
-            </ul>
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                </a>
+                <li><a href=""></a></li>
 
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
+                <div class="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" color="#00bfff" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg>
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </ul>
+
+
         </div>
     </nav>
 
@@ -197,9 +205,9 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                     <div class="user-bio">
                         <h3>Bio</h3>
                         <p class="bio">
-                        <?php
-                        echo $user_data['cdo_habilidades'] . "<br>";
-                        ?>
+                            <?php
+                            echo $user_data['cdo_habilidades'] . "<br>";
+                            ?>
                         </p>
                     </div>
                     <div class="profile-btn">
@@ -321,7 +329,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         </div>
 
                                         <form method="POST">
-                                             
+
                                             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
                                             <input type="submit" name="enviar" value="Enviar">
                                         </form>

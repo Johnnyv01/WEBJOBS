@@ -3,22 +3,6 @@ include('connect.php');
 
 var_dump($_POST);
 
-// if($_POST['profissao'] == 'ConstrucaoCivil'){
-//    echo 'Profissao é Construcao civil';
-//    $profissao=$POST = 'ConstrucaoCivil';
-// }
-// else if($_POST['profissao'] == 'eletricista'){
-//    echo 'Profissao é eletricista';
-//    $profissao=$POST = 'eletricista';
-// }
-// else if($_POST['profissao'] == 'servicosHidraulicos'){
-//    echo 'Profissao é servicosHidraulicos';
-//    $profissao=$POST = 'servicosHidraulicos';
-// }
-// else if($_POST['profissao'] == 'servicosInformatica'){
-//    echo 'Profissao é servicosInformatica';
-//    $profissao=$POST = 'servicosInformatica';
-// }
 $profissao = implode(';',$_POST['profissao']);
 
 var_dump($profissao);
@@ -47,6 +31,7 @@ $habilidades=$_POST['cdo_habilidades'];
 
  if(mysqli_query($conexao,$sql)){
    echo "O usuario foi cadastrado com sucesso!";
+   header("Location: login.php");
  } else {
     echo "Erro ao tentar cadastrar o usuario. " . mysqli_connect_error($conexao);
  }

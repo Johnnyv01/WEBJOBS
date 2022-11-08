@@ -9,8 +9,23 @@
     box-sizing: border-box;
 }
 
+
+/*Letras*/
+a:link{
+    color: rgb(27, 26, 26); 
+    text-decoration: none;
+}
+a:visited{
+    color: #eee;
+}
+a:hover{
+    text-decoration: underline;
+    color: #00CDCD;
+
+}
+
 body{
-    background:whitesmoke ;
+    background:rgb(228, 103, 103) ;
     overflow-x: hidden;
     padding-top: 0;
     font-family: 'Courier New', Courier, monospace;  /*MUDAR A FONTE*/
@@ -24,14 +39,15 @@ body{
 /*navbar*/
 #navbar {
     width: 100%;
-    background: #111;
+    background: whitesmoke;
     color: #eee;
     height: 80px;
     
 }
 
 #navbar-container {
-   width: 80%;
+   width: 88%;
+   color: #333;
    height: 100%;
    margin: auto;
    display: flex;
