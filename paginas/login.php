@@ -1,7 +1,7 @@
 <?php
 include('connect.php');
 
-$retorno = $_GET['verdade'];
+$TudoCerto=$_GET['variavel'];
 
 
 if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
@@ -103,7 +103,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
   
 <script>
-  if ($tudoCerto)
+  if ($TudoCerto = true)
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
