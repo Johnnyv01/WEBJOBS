@@ -1,37 +1,39 @@
 <?php
-include('connect.php');
+include 'connect.php';
 
-$TudoCerto=$_GET['variavel'];
+$TudoCerto = $_GET['variavel'];
+
+echo $TudoCerto;
 
 
 if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
-
-  if (strlen($_POST['cdo_email']) == 0) {
-    echo "Preencha o seu email";
-  } else if (strlen($_POST['cdo_email']) == 0) {
-    echo "Preencha sua senha";
-  } else {
-    $cdo_email = $conexao->real_escape_string($_POST['cdo_email']);
-    $cdo_senha = $conexao->real_escape_string($_POST['cdo_senha']);
-
-    $sql_code = "SELECT * FROM `cadastro` WHERE `cdo_email` = '$cdo_email' AND `cdo_senha` = '$cdo_senha'";
-
-    $sql_query = $conexao->query($sql_code) or die("Falha na execucao do codigo sql: " . $conexao->error);
-    var_dump($sql_query);
-    $quantidade = $sql_query->num_rows;
-    if ($quantidade == 1) {
-      $usuario = $sql_query->fetch_assoc();
-      if (!isset($_SESSION)) {
-        session_start();
-      }
-      $_SESSION['cdo_id'] = $usuario['cdo_id'];
-      $_SESSION['cdo_senha'] = $usuario['cdo_senha'];
-
-      header("Location: perfilPrestador/perfilPrestador.php");
+    if (strlen($_POST['cdo_email']) == 0) {
+        echo 'Preencha o seu email';
+    } elseif (strlen($_POST['cdo_email']) == 0) {
+        echo 'Preencha sua senha';
     } else {
-      echo "Falha ao logar email ou senha icorretos";
+        $cdo_email = $conexao->real_escape_string($_POST['cdo_email']);
+        $cdo_senha = $conexao->real_escape_string($_POST['cdo_senha']);
+
+        $sql_code = "SELECT * FROM `cadastro` WHERE `cdo_email` = '$cdo_email' AND `cdo_senha` = '$cdo_senha'";
+
+        ($sql_query = $conexao->query($sql_code)) or
+            die('Falha na execucao do codigo sql: ' . $conexao->error);
+        var_dump($sql_query);
+        $quantidade = $sql_query->num_rows;
+        if ($quantidade == 1) {
+            $usuario = $sql_query->fetch_assoc();
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            $_SESSION['cdo_id'] = $usuario['cdo_id'];
+            $_SESSION['cdo_senha'] = $usuario['cdo_senha'];
+
+            header('Location: perfilPrestador/perfilPrestador.php');
+        } else {
+            echo 'Falha ao logar email ou senha icorretos';
+        }
     }
-  }
 }
 ?>
 
@@ -101,13 +103,32 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
   </div>
   </div>
 
-  
-<script>
-  if ($TudoCerto = true)
+ <!-- <div id="snackbar">Usuario cadastrado com sucesso!!</div>
+<script type="text/javascript">
+  if(var == 1)
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  <div id="snackbar">Usuario cadastrado com sucesso!!</div>
+</script> -->
+
+
+
+<?php
+$var = $TudoCerto;
+?>
+<script>
+   <?php
+       echo "var jsvar ='$var';";
+   ?>
+   console.log(jsvar); 
+</script>
+
+<div id="snackbar">Usuario cadastrado com sucesso!!</div>
+<script type="text/javascript">
+  if(jsvar == 1)
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 </script>
 
 

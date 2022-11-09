@@ -31,7 +31,7 @@ $habilidades=$_POST['cdo_habilidades'];
 
  if(mysqli_query($conexao,$sql)){
    echo "O usuario foi cadastrado com sucesso!";
-   header("Location: login.php?variavel=true");
+   header("Location: login.php?variavel=1");
  } else {
     echo "Erro ao tentar cadastrar o usuario. " . mysqli_connect_error($conexao);
  }
