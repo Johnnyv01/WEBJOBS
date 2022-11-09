@@ -70,8 +70,8 @@ if (isset($_FILES['arquivos'])) {
         if (!$deuCerto2)
             $tudoCerto = false;
     }
-
     if ($tudoCerto)
+   
         echo "<p>Todos os arquivos foram enviados com sucesso!</p>";
     else
         echo "<p>Falha ao enviar 1 ou mais arquivos!</p>";
@@ -124,6 +124,26 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 </head>
 
 <body>
+<div id="snackbar">Todos os arquivos foram enviados com sucesso!</div>
+     <script>
+        
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000); 
+    </script> 
+
+   <!-- <div id="snackbar">Usuario cadastrado com sucesso!!</div>
+    <script>
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>-->
+
+
 
     <nav id="navbar">
         <div id="navbar-container">
