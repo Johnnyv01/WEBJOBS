@@ -4,6 +4,8 @@ include('../connect.php');
 session_start();
 
 
+
+
 if (!isset($_SESSION['cdo_id'])) {
     header("Location: ../login.php?erro=true");
     exit;
@@ -107,7 +109,7 @@ if (!isset($_SESSION['cdo_id'])) {
                         </div>
                         <div class="mt-5 text-center">
                             <button class="btn btn-primary profile-button" type="submit">Salva perfil</button>
-                            <a href="perfilPrestador.php"><button class="btn btn-primary back-profile" type="button">voltar</button></a>
+                            <a href="perfilPrestador.php?atualizado"><button class="btn btn-primary back-profile" type="button">voltar</button></a>
                         </div>
                     </div>
                 </form>

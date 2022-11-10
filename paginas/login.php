@@ -3,8 +3,6 @@ include 'connect.php';
 
 $TudoCerto = $_GET['variavel'];
 
-echo $TudoCerto;
-
 
 if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
     if (strlen($_POST['cdo_email']) == 0) {
@@ -29,7 +27,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
             $_SESSION['cdo_id'] = $usuario['cdo_id'];
             $_SESSION['cdo_senha'] = $usuario['cdo_senha'];
 
-            header('Location: perfilPrestador/perfilPrestador.php');
+            header('Location: perfilPrestador/perfilPrestador.php?atualizado');
         } else {
             echo 'Falha ao logar email ou senha icorretos';
         }

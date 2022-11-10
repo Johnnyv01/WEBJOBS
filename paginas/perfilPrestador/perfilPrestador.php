@@ -4,6 +4,8 @@ include("../connect.php");
 
 session_start();
 
+$TudoCerto = $_GET['atualizado'];
+
 if (!isset($_SESSION['cdo_id'])) {
     header("Location: ../login.php?erro=true");
     exit;
@@ -124,24 +126,6 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 </head>
 
 <body>
-<div id="snackbar">Todos os arquivos foram enviados com sucesso!</div>
-     <script>
-        
-            var x = document.getElementById("snackbar");
-            x.className = "show";
-            setTimeout(function() {
-                x.className = x.className.replace("show", "");
-            }, 3000); 
-    </script> 
-
-   <!-- <div id="snackbar">Usuario cadastrado com sucesso!!</div>
-    <script>
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function() {
-            x.className = x.className.replace("show", "");
-        }, 3000);
-    </script>-->
 
 
 
@@ -286,7 +270,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         <img width="150px" ; height="150px" ; src="<?php echo $arquivo['path']; ?>" alt="">
                                     </a>
                                     <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
-                                    <a id="link" href="perfilPrestador.php?deletar=<?php echo $arquivo['id']; ?>"><i class="fa fa-trash"></i></a>
+                                    <a id="link" href="perfilPrestador.php?atualizado=2&deletar=<?php echo $arquivo['id']; ?>"><i class="fa fa-trash"></i></a>
                                 </div>
 
 
@@ -315,7 +299,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button class="enviar" name="upload" type="submit">Enviar</button>
+                                       <button class="enviar"  name="upload" type="submit" href="perfilPrestador.php?atualizado=1">Enviar</button>
+                                    
                                     </div>
                                     </form>
                                 </div>
@@ -382,6 +367,47 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     </div>
     </div>
     </div>
+
+<?php
+$var = $TudoCerto;
+echo $var;
+?>
+<script>
+   <?php
+       echo "var jsvar ='$var';";
+   ?>
+   console.log(jsvar); 
+</script>
+
+<div id="snackbar">Dados do usuario foram atualizados com sucesso!!</div>
+<script type="text/javascript">
+  if(jsvar == 1)
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+</script>
+
+
+
+
+<?php
+$var = $TudoCerto;
+echo $var
+?>
+<script>
+   <?php
+       echo "var jsvar ='$var';";
+   ?>
+   console.log(jsvar); 
+</script>
+
+<div id="snackbars">Imagem excluida com sucesso!!</div>
+<script type="text/javascript">
+  if(jsvar == 2)
+  var x = document.getElementById("snackbars");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+</script>
 
     <script src="./js/perfil.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

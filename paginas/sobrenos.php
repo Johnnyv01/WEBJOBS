@@ -19,7 +19,7 @@
             <ul id="navbar-items">
                 <li><a href="sobrenos.php"> Sobre Nós </a></li>
                 <li><a href="servicos.php"> Serviços </a></li>
-                <li><a href="login.php">Entrar </a></li>
+                <li><a href="login.php?variavel">Entrar </a></li>
             </ul>
         </div>
     </nav>
@@ -47,11 +47,11 @@
     </section>
 
     <div id="devs">
-        <div class="headline">A GANGUE SGHRRRR</div>
+        <div class="headline">NOSSO TIME</div>
         <div id="devs-container">
             <div class="dev">
-                <h1>Jonathan Vicente</h1><br>
                 <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+                <h1>Jonathan Vicente</h1><br>
                 <p>Desenvolvedor de Software</p>
             </div>
             <div class="dev">

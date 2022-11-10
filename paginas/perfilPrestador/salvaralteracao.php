@@ -33,7 +33,7 @@ $uf=$_POST['cdo_uf'];
   cdo_numero_casa = '$numero_casa', cdo_complemento = '$complemento', cdo_cidade = '$cidade' , cdo_uf = '$uf' WHERE cdo_id = $id";
   
   if(mysqli_query($conexao,$sqlinsert)){
-    header("Location: perfilPrestador.php");
+    header("Location: perfilPrestador.php?atualizado=1");
     
   } else {
      echo "Erro ao tentar cadastrar o usuario. " . mysqli_connect_error($conexao);
