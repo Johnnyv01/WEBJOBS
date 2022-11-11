@@ -72,11 +72,6 @@ if (isset($_FILES['arquivos'])) {
         if (!$deuCerto2)
             $tudoCerto = false;
     }
-    if ($tudoCerto)
-   
-        echo "<p>Todos os arquivos foram enviados com sucesso!</p>";
-    else
-        echo "<p>Falha ao enviar 1 ou mais arquivos!</p>";
 }
 
 
@@ -94,6 +89,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../chat/styles.css">
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
@@ -125,9 +121,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <title>Perfil</title>
 </head>
 
-<body>
-
-
+<body onload="checaCookie()">
 
     <nav id="navbar">
         <div id="navbar-container">
@@ -214,6 +208,12 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                             ?>
                         </p>
                     </div>
+
+
+
+                    <script>
+                        
+                    </script>
                     <div class="profile-btn">
                         <button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 
@@ -299,8 +299,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                       <button class="enviar"  name="upload" type="submit" href="perfilPrestador.php?atualizado=1">Enviar</button>
-                                    
+                                        <button class="enviar" name="upload" type="submit" href="perfilPrestador.php?atualizado=1">Enviar</button>
+
                                     </div>
                                     </form>
                                 </div>
@@ -368,46 +368,62 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     </div>
     </div>
 
-<?php
-$var = $TudoCerto;
-echo $var;
-?>
-<script>
-   <?php
-       echo "var jsvar ='$var';";
-   ?>
-   console.log(jsvar); 
-</script>
+    <script>
+        function checaCookie() {
 
-<div id="snackbar">Dados do usuario foram atualizados com sucesso!!</div>
-<script type="text/javascript">
-  if(jsvar == 1)
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-</script>
+            staticBackdrop();
+
+           /* if (navigator.cookieEnabled == true)
+                alert("Cookies permitidos")
+            else
+                alert("Cookies bloqueados")*/
+        }
+    </script>
+
+    <?php
+    $var = $TudoCerto;
+    echo $var;
+    ?>
+    <script>
+        <?php
+        echo "var jsvar ='$var';";
+        ?>
+        console.log(jsvar);
+    </script>
+
+    <div id="snackbar">Dados do usuario foram atualizados com sucesso!!</div>
+    <script type="text/javascript">
+        if (jsvar == 1)
+            var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>
 
 
 
 
-<?php
-$var = $TudoCerto;
-echo $var
-?>
-<script>
-   <?php
-       echo "var jsvar ='$var';";
-   ?>
-   console.log(jsvar); 
-</script>
+    <?php
+    $var = $TudoCerto;
+    echo $var
+    ?>
+    <script>
+        <?php
+        echo "var jsvar ='$var';";
+        ?>
+        console.log(jsvar);
+    </script>
 
-<div id="snackbars">Imagem excluida com sucesso!!</div>
-<script type="text/javascript">
-  if(jsvar == 2)
-  var x = document.getElementById("snackbars");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-</script>
+    <div id="snackbars">Imagem excluida com sucesso!!</div>
+    <script type="text/javascript">
+        if (jsvar == 2)
+            var x = document.getElementById("snackbars");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>
 
     <script src="./js/perfil.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
