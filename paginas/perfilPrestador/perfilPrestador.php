@@ -157,6 +157,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         <div class="profile-header">
             <div class="profile-img">
                 <img src="img/image-perfil.jpg" width="200px" alt="Image Perfil">
+                <img src="img/cam.png">
             </div>
             <div class="profile-nav-info">
                 <h3 class="user-name">
@@ -289,7 +290,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="POST" enctype="multipart/form-data" action="">
+                                        <form method="POST" enctype="multipart/form-data" action="perfilPrestador.php?atualizado=3">
                                             <div>
                                                 <label for="arquivo">Selecione um aqurivo</label>
                                                 <input multiple name="arquivos[]" type="file" id="arquivo">
@@ -299,15 +300,14 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button class="enviar" name="upload" type="submit" href="perfilPrestador.php?atualizado=1">Enviar</button>
-
+                                        <button class="enviar" name="upload" type="submit">Enviar</button></a>
                                     </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+            
                     <div class="perfil-review tab">
                         <h1>Seus Reviews</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -372,17 +372,15 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         function checaCookie() {
 
             staticBackdrop();
-
-           /* if (navigator.cookieEnabled == true)
-                alert("Cookies permitidos")
+            if (navigator.cookieEnabled == true)
+            staticBackdrop();
             else
-                alert("Cookies bloqueados")*/
+                alert("Cookies bloqueados")
         }
     </script>
 
     <?php
     $var = $TudoCerto;
-    echo $var;
     ?>
     <script>
         <?php
@@ -401,12 +399,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         }, 3000);
     </script>
 
-
-
-
-    <?php
+<?php
     $var = $TudoCerto;
-    echo $var
     ?>
     <script>
         <?php
@@ -424,6 +418,29 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
             x.className = x.className.replace("show", "");
         }, 3000);
     </script>
+
+
+<?php
+    $var = $TudoCerto;
+    echo $var
+    ?>
+    <script>
+        <?php
+        echo "var jsvar ='$var';";
+        ?>
+        console.log(jsvar);
+    </script>
+
+    <div id="snackbars">Imagem foi adicionada a galeria com sucesso!!</div>
+    <script type="text/javascript">
+        if (jsvar == 3)
+            var x = document.getElementById("snackbars");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>
+
 
     <script src="./js/perfil.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

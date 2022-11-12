@@ -17,7 +17,6 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
         ($sql_query = $conexao->query($sql_code)) or
             die('Falha na execucao do codigo sql: ' . $conexao->error);
-        var_dump($sql_query);
         $quantidade = $sql_query->num_rows;
         if ($quantidade == 1) {
             $usuario = $sql_query->fetch_assoc();
@@ -29,7 +28,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
             header('Location: perfilPrestador/perfilPrestador.php?atualizado');
         } else {
-            echo 'Falha ao logar email ou senha icorretos';
+            header('Location: perfilPrestador/perfilPrestador.php?variavel=2');
         }
     }
 }
@@ -54,7 +53,6 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
         <ul id="navbar-items">
           <li><a href="sobrenos.php"> Sobre Nós </a></li>
           <li><a href="servicos.php"> Serviços </a></li>
-          <li><a href="login.php">Entrar </a></li>
         </ul>
       </div>
     </nav>
@@ -120,15 +118,20 @@ $var = $TudoCerto;
    ?>
    console.log(jsvar); 
 </script>
-
+<div id="snackbars">Erro ao tentar cadastrar o usuario!!</div>
 <div id="snackbar">Usuario cadastrado com sucesso!!</div>
 <script type="text/javascript">
-  if(jsvar == 1)
+  if(jsvar == 1){
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  } else {
+    var x = document.getElementById("snackbars");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  
 </script>
-
 
 </body>
 

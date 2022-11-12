@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,7 +43,7 @@
 <body>
 
     <div id="corpo-form">
-        <form action="incluindoCadastro.php" method="POST">
+        <form action="incluindoCadastro.php" enctype="multipart/form-data" method="POST">
             <h1>Cadastro Prestador</h1>
 
             <div class="f-container">
@@ -138,12 +141,12 @@
             </div>
 
             <div class="f-container-ft">
-                <label for="doc_usuario" id="ft">Foto de perfil <input type="file" name="doc_usuario" id="doc_usuario"></label>
-                <label for="doc_usuario"><img id="img"></label>
+                <label for="foto_doc" id="ft">Foto de perfil <input type="file" name="foto_doc" id="foto_doc"></label>
+                <label for="foto_doc"><img id="img"></label>
                 <h5>Clique dentro do campo, e selecione a imagem.</h5>
-                <input type="submit" value="Cadastrar" id="continuar" onclick="return verificarSenha()">
+                <input type="submit" value="Cadastrar" id="continuar">
             </div>
-            <a href="login.php" id="voltar">Voltar</a>
+            <a href="login.php?variavel" id="voltar">Voltar</a>
         </form>
     </div>
 
@@ -152,3 +155,14 @@
     </div>
 
 </body>
+
+<script>
+        $('#foto_doc').change(function(){
+            const file = $(this)[0].files[0];
+            const fileReader = new FileReader();
+            fileReader.onloadend = function(){
+                $('#img').attr('src', fileReader.result);
+            }
+            fileReader.readAsDataURL(file)
+        });
+    </script>
