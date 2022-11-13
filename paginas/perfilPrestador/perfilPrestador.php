@@ -127,9 +127,6 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         <div id="navbar-container">
             <h1 class="logo"> WEB JOBS</h1>
             <ul id="navbar-items">
-                <li><a href="sobrenos.php"> Sobre Nós </a></li>
-                <li><a href="servicos.php"> Serviços </a></li>
-                <li><a href="login.php">Entrar </a></li>
                 <li><a href=""></a></li>
 
                 <div class="dropdown">
@@ -142,8 +139,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                         User
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="../sobrenos.php">Sobre Nos</a></li>
+                        <li><a class="dropdown-item" href="../servicos.php">Serviços</a></li>
                         <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
                     </ul>
                 </div>
@@ -156,22 +153,22 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
-            <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>";?>
+                <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>"; ?>
 
-            <nav id="navs">
-                <ul id="foto">
-                    <li><img src="img/cam.png" width="200px" id="cam">
-                    <ul>
-                        <li>Upload de foto</li>
-                        <li>Remover foto</li>
+                <nav id="navs">
+                    <ul id="foto">
+                        <li><img src="img/cam.png" width="200px" id="cam">
+                            <ul>
+                                <li>Upload de foto</li>
+                                <li>Remover foto</li>
+                            </ul>
+                        </li>
                     </ul>
-                    </li>
-                </ul>
-            </nav>
+                </nav>
             </div>
-           
-           <!-- camera -->
-           
+
+            <!-- camera -->
+
             <div class="profile-nav-info">
                 <h3 class="user-name">
 
@@ -340,8 +337,6 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                     <div id="conteudo">
                                         <div id="caixa-chat">
                                             <div id="chat">
-
-
                                             </div>
 
                                         </div>
@@ -349,7 +344,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         <form method="POST">
 
                                             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
-                                            <input type="submit" name="enviar" value="Enviar">
+                                            
+                                           <input type="submit" name="enviar" value="Enviar">
                                         </form>
 
                                         <?php
@@ -401,58 +397,32 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         ?>
         console.log(jsvar);
     </script>
-
+    <div id="snackbarss">Imagem foi adicionada a galeria com sucesso!!</div>
+    <div id="snackbars">Imagem excluida com sucesso!!</div>
     <div id="snackbar">Dados do usuario foram atualizados com sucesso!!</div>
     <script type="text/javascript">
-        if (jsvar == 1)
+        if (jsvar == 1) {
             var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function() {
-            x.className = x.className.replace("show", "");
-        }, 3000);
-    </script>
-
-    <?php
-    $var = $TudoCerto;
-    ?>
-    <script>
-        <?php
-        echo "var jsvar ='$var';";
-        ?>
-        console.log(jsvar);
-    </script>
-
-    <div id="snackbars">Imagem excluida com sucesso!!</div>
-    <script type="text/javascript">
-        if (jsvar == 2)
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        } else if (jsvar == 2) {
             var x = document.getElementById("snackbars");
-        x.className = "show";
-        setTimeout(function() {
-            x.className = x.className.replace("show", "");
-        }, 3000);
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        } else if (jsvar == 3) {
+            var x = document.getElementById("snackbarss");
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        }
     </script>
 
 
-    <?php
-    $var = $TudoCerto;
-    echo $var
-    ?>
-    <script>
-        <?php
-        echo "var jsvar ='$var';";
-        ?>
-        console.log(jsvar);
-    </script>
-
-    <div id="snackbars">Imagem foi adicionada a galeria com sucesso!!</div>
-    <script type="text/javascript">
-        if (jsvar == 3)
-            var x = document.getElementById("snackbars");
-        x.className = "show";
-        setTimeout(function() {
-            x.className = x.className.replace("show", "");
-        }, 3000);
-    </script>
 
 
     <script src="./js/perfil.js"></script>

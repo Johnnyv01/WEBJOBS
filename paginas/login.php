@@ -28,7 +28,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
             header('Location: perfilPrestador/perfilPrestador.php?atualizado');
         } else {
-          header('Location: perfilPrestador/perfilPrestador.php?atualizado');
+          header('Location: login.php?variavel=3&erro=true');
         }
     }
 }
@@ -118,6 +118,8 @@ $var = $TudoCerto;
    ?>
    console.log(jsvar); 
 </script>
+
+<div id="snackbarss">Senha ou email invalidos!!</div>
 <div id="snackbars">Erro ao tentar cadastrar o usuario!!</div>
 <div id="snackbar">Usuario cadastrado com sucesso!!</div>
 <script type="text/javascript">
@@ -125,8 +127,12 @@ $var = $TudoCerto;
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  } else {
+  } else if (jsvar == 2) {
     var x = document.getElementById("snackbars");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }else if (jsvar == 3) {
+    var x = document.getElementById("snackbarss");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }

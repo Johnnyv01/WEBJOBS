@@ -17,8 +17,6 @@ var_dump($_POST);
 
 $profissao = implode(';', $_POST['profissao']);
 
-
-
 var_dump($profissao);
 
 $foto_doc = $_FILES['foto_doc'];
@@ -46,14 +44,14 @@ $sql = "INSERT INTO cadastro(cdo_nomecompleto,cdo_profissao,cdo_email,cdo_senha,
  cdo_telefone,cdo_cep,cdo_rua,cdo_bairro,cdo_cidade,cdo_uf,cdo_numero_casa,cdo_complemento,cdo_habilidades,foto_doc) VALUES('$nomeCompleto','$profissao','$email','$senha','$confirmSenha',
  '$apelido','$cpf','$datanasc','$telefone','$cep','$rua','$bairro','$cidade','$uf','$numeroCasa','$complemento','$habilidades','$diretorio')";
 
- echo $sql;
+// echo "br". $sql;
 
 if (mysqli_query($conexao, $sql)) {
   echo "O usuario foi cadastrado com sucesso!";
    header("Location: login.php?variavel=1");
 } else {
   echo " Erro ao tentar cadastrar o usuario. " . mysqli_connect_error($conexao);
-  header("Location: login.php?variavel=2");
+  //header("Location: login.php?variavel=2");
 }
 mysqli_close($conexao);
 ?>
