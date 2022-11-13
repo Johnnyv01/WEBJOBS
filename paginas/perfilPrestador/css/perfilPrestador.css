@@ -9,6 +9,53 @@
     box-sizing: border-box;
 }
 
+/*Configuracoes do icone da camera - Primeira lista*/
+#foto{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#foto li:hover ul {display:block}
+/*Imagem da camera */
+#cam{
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+    margin-left: 400%;
+    margin-top: 300%;
+   
+}
+
+/*Segunda lista*/
+#foto li ul{
+    cursor: pointer;
+    display: none;
+    list-style: none;
+    background-color: rgb(251, 251, 251);
+    margin-left: 60%;
+    margin-top: 70%;
+    width: 200px;
+}
+#foto li ul li{
+    color: rgb(6, 1, 1);
+    padding: 10px 30px;
+    margin: 5px 1;
+    background-color: rgb(250, 250, 250);
+
+}#foto li ul li:hover{color:rgb(255, 255, 255);background-color: rgb(51, 27, 229);}
+/*Container uqe possui a foto da camera*/
+#navs{
+    border: 0px solid red;
+    position: relative;
+    width: 90px;
+    height: 80px;
+    margin-right: 58%;
+    margin-top: 16%;
+    
+}
+
+
 /*popup*/
 #snackbar {
     visibility: hidden;
@@ -167,7 +214,7 @@ body{
 
 #navbar-container {
    width: 88%;
-   color: #333;
+   color: rgb(0, 0, 0);
    height: 100%;
    margin: auto;
    display: flex;
@@ -186,12 +233,12 @@ body{
 }
 
 .profile-header{
-    background: #fff;
+    background: rgb(255, 255, 255);
     width: 100%;
     display: flex;
     height: 190px;
     position: relative;
-    box-shadow: 0px 3px 4px rgba(0,0,0,.2);
+    box-shadow: 0px 4px 5px rgba(0,0,0,.2);
 }
 
 .profile-img{
@@ -221,6 +268,9 @@ padding-top: 60px;
 }
 
 .profile-nav-info h3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     font-variant: small-caps;
     font-size: 2rem;
     font-family: sans-serif;

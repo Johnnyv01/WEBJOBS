@@ -14,6 +14,7 @@ if (!isset($_SESSION['cdo_id'])) {
     $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
+    
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +35,7 @@ if (!isset($_SESSION['cdo_id'])) {
         <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle " width="150px" src="img/image-perfil.jpg">
+                     <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>";?>
                     <span class="font-weight-bold">
                         <?php echo $user_data['cdo_nomecompleto'] . "<br>";
                         ?>

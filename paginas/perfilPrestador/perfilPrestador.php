@@ -156,9 +156,22 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
-                <img src="img/image-perfil.jpg" width="200px" alt="Image Perfil">
-                <img src="img/cam.png">
+            <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>";?>
+
+            <nav id="navs">
+                <ul id="foto">
+                    <li><img src="img/cam.png" width="200px" id="cam">
+                    <ul>
+                        <li>Upload de foto</li>
+                        <li>Remover foto</li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
             </div>
+           
+           <!-- camera -->
+           
             <div class="profile-nav-info">
                 <h3 class="user-name">
 
@@ -213,7 +226,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
 
                     <script>
-                        
+
                     </script>
                     <div class="profile-btn">
                         <button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -307,7 +320,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="perfil-review tab">
                         <h1>Seus Reviews</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -373,7 +386,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
             staticBackdrop();
             if (navigator.cookieEnabled == true)
-            staticBackdrop();
+                staticBackdrop();
             else
                 alert("Cookies bloqueados")
         }
@@ -399,7 +412,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         }, 3000);
     </script>
 
-<?php
+    <?php
     $var = $TudoCerto;
     ?>
     <script>
@@ -420,7 +433,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     </script>
 
 
-<?php
+    <?php
     $var = $TudoCerto;
     echo $var
     ?>

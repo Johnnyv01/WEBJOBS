@@ -28,7 +28,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
             header('Location: perfilPrestador/perfilPrestador.php?atualizado');
         } else {
-            header('Location: perfilPrestador/perfilPrestador.php?variavel=2');
+          header('Location: perfilPrestador/perfilPrestador.php?atualizado');
         }
     }
 }
