@@ -151,14 +151,15 @@
                     <div class="perfil-posts tab">
                         <div class="galery">
                             <h1 class="titulo">Galeria de Fotos</h1>
-                            <div class="coluna">
+                            
 
 
                             <?php
                             while ($arquivo = $sqlQuery->fetch_assoc()) {
-                            ?>"<img src=../$user_data[foto_doc] id='foto'></a>";
+                            ?>
                                 <div class="coluna">
-                                    <a href="<?php echo "../perfilPrestador/".$arquivo['path']; ?>" target="_blank">
+                                      
+                                    <a href="../perfilPrestador/<?php echo $arquivo['path']; ?>" target="_blank"> 
                                         <img width="150px" ; height="150px" ; src="<?php echo $arquivo['path']; ?>" alt="">
                                     </a>
                                     <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
@@ -170,10 +171,6 @@
                             }
                             ?>
 
-
-          
-
-                            </div>
 
                          
                           <!--  <div class="tabela">
