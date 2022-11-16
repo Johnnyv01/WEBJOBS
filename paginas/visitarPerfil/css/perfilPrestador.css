@@ -9,6 +9,16 @@
     box-sizing: border-box;
 }
 
+.galery{
+    align-items: center;
+    justify-items: center;
+    display: -ms-inline-grid;
+}
+
+.coluna {
+    display: inline-grid;
+}
+
 body{
     background:#e9e9e9 ;
     overflow-x: hidden;

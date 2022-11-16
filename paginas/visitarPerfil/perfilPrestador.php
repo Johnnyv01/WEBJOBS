@@ -7,9 +7,14 @@
     
     $resultado = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($resultado);
+
+    $consulta2 = "SELECT * FROM ARQUIVOS WHERE id = '129'";
+
+    $resultado2 = $conexao->query($consulta2);
+    $user_data2 = mysqli_fetch_assoc($resultado2);
      
    
-  
+    $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     ?>
 
 <!DOCTYPE html>
@@ -50,10 +55,9 @@
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
-                <img src="img/image-perfil.jpg" width="200px" alt="Image Perfil">
+            <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>"; ?>
             </div>
            
-                 
             <div class="profile-nav-info">
                 <h3 class="user-name">
                <?php 
@@ -145,12 +149,34 @@
                 </div>
                 <div class="profile-body">
                     <div class="perfil-posts tab">
-                        <div class="galery-container">
+                        <div class="galery">
                             <h1 class="titulo">Galeria de Fotos</h1>
-                            <div class="tabela">
+                            
 
 
-                            </div>
+                            <?php
+                            while ($arquivo = $sqlQuery->fetch_assoc()) {
+                            ?>
+                                <div class="coluna">
+                                      
+                                    <a href="../perfilPrestador/<?php echo $arquivo['path']; ?>" target="_blank"> 
+                                        <img width="150px" ; height="150px" ; src="<?php echo $arquivo['path']; ?>" alt="">
+                                    </a>
+                                    <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
+                                    <a id="link" href="perfilPrestador.php?atualizado=2&deletar=<?php echo $arquivo['id']; ?>"></a>
+                                </div>
+
+
+                            <?php
+                            }
+                            ?>
+
+
+                         
+                          <!--  <div class="tabela">
+
+
+                            </div> -->
                         </div>
 
                     </div>

@@ -32,8 +32,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE cadastro (
   cdo_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  adm_Id int NOT NULL,
-  fk_src_id int(11) NOT NULL,
+  cdo_arq_id
+  cdo_adm_Id BIGINT NOT NULL,
+  cdo_src_id BIGINT NOT NULL,
   cdo_nomecompleto varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_profissao varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_email varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -50,7 +51,9 @@ CREATE TABLE cadastro (
   cdo_uf varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   cdo_numero_casa varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   cdo_complemento varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  cdo_habilidades varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  cdo_habilidades varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  foto_doc varchar(100) COLLATE utf8_unicode_ci NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 --
 
@@ -134,11 +137,11 @@ CREATE TABLE tb_chat (
   data  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP()
 )
 
-CREATE TABLE `arquivos` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(150) NOT NULL,
-  `path` varchar(100) NOT NULL,
-  `data_upload` datetime NOT NULL DEFAULT current_timestamp()
+CREATE TABLE arquivos (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome varchar(150) NOT NULL,
+  path varchar(100) NOT NULL,
+  data_upload datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
