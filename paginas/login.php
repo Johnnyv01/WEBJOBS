@@ -101,16 +101,6 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
   </div>
   </div>
 
- <!-- <div id="snackbar">Usuario cadastrado com sucesso!!</div>
-<script type="text/javascript">
-  if(var == 1)
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-</script> -->
-
-
-
 <?php
 $var = $TudoCerto;
 ?>

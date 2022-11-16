@@ -3,66 +3,61 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
+/* The device with borders */
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
   left: 50%;
-  bottom: 30px;
-  font-size: 17px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
 }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
 }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 360px;
+  height: 640px;
+  background: white;
 }
 </style>
 </head>
 <body>
 
-<h2>Snackbar / Toast</h2>
-<p>Snackbars are often used as a tooltips/popups to show a message at the bottom of the screen.</p>
-<p>Click on the button to show the snackbar. It will disappear after 3 seconds.</p>
-
-<button onclick="myFunction()">Show Snackbar</button>
-
-<div id="snackbar">Some text some message..</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-</script>
+<div class="smartphone">
+  <div class="content">
+    <iframe src="/w3css/tryw3css_templates_band.htm" style="width:100%;border:none;height:100%" />
+  </div>
+</div>
 
 </body>
 </html>

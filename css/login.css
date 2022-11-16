@@ -159,7 +159,15 @@ body *{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: animacao_main-login 2s;
 }
+
+/* Animação da div */
+@keyframes animacao_main-login {
+    0%   { width: 0%; opacity: 0; }
+    100% { width: 100%; opacity: 1; }
+}
+
 
 .lado-esquerdo > h1{
     font-size: 3vw;
@@ -255,6 +263,9 @@ body *{
     background: #eee;
     cursor: pointer;
     box-shadow: 0px 5px 20px -12px rgb(82, 82, 82);
+}
+.btn_login:hover{
+    width: 20%;
 }
 
 #footer {
