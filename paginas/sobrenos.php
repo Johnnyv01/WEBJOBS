@@ -76,9 +76,6 @@
             </div>
         </div>
     </div>
-    <div id="footer">
-        <p>Copyright 2022 - Todos os direitos reservados</p>
-    </div>
 </body>
 
 <!-- Footer -->
@@ -194,12 +191,12 @@
   </section>
   <!-- Section: Links  -->
 
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Webjobs.com.br</a>
-  </div>
+
   <!-- Copyright -->
 </footer>
+
+<div id="footer">
+        <p>Copyright 2022 - Todos os direitos reservados</p>
+    </div>
 
 </html>

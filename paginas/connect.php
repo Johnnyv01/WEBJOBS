@@ -1,7 +1,4 @@
 <?php
-<<<<<<< HEAD
-$host = 'localhost';
-=======
 $host = 'localhost';
 $usuario = 'root';
 $senha = '';
