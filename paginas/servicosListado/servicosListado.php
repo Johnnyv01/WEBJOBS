@@ -53,7 +53,9 @@ if (!isset($_GET['cdo_profissao'])) {
             <div class="row-fluid">
 
                 <div class="span2">
-                    <img src="img/image-perfil.jpg" class="img-circle">
+                    
+                <?php echo "<img src=../$dadoss[foto_doc] id='foto'></a>"; ?>
+                   <!-- <img src="img/image-perfil.jpg" class="img-circle">-->
                 </div>
 
                 <div class="span8">

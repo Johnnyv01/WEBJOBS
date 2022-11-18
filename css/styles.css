@@ -162,10 +162,10 @@ a:hover{
 /*navbar*/
 #navbar {
     width: 100%;
-    background: whitesmoke;
-    color: rgb(31, 29, 29);
-    height: 80px;
-    
+    background: #1f1f20b6;
+    color: whitesmoke;
+    height: 68px;
+  
 }
 
 #navbar-container {
@@ -192,8 +192,9 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #eee;
-    background: url('../imagens/img/frelancher.jpg') no-repeat ;
+    color: rgb(0, 0, 0);
+    background: url('../imagens/img/freelancer.jpg') no-repeat ;
+    height: 50%;
   
 
 }
@@ -206,8 +207,9 @@ a:hover{
     padding: 1.5%;
     border: 5px solid rgb(17, 14, 14);
     background-size: cover;
-    background: rgba(36, 30, 30, 0.9);
+    background: rgba(255, 255, 255, 0.575);
 }
+
 
 .box {
     border-radius: 5px;
@@ -223,7 +225,7 @@ a:hover{
 
 #showcase-container h2 {
     font-size: 1.5rem;
-    color: #eee;
+    color: rgb(0, 0, 0);
 }
 
 #showcase-container p {
@@ -233,7 +235,6 @@ a:hover{
 }
 
 #showcase-container input {
-    
     height: 30px;
     border: none;
     margin-left: 0.4%;
@@ -262,7 +263,8 @@ a:hover{
 
 #clients {
     width: 100%;
-    background-image: linear-gradient(to right,rgb(223, 214, 214) , #111);
+    /*background-image: linear-gradient(to right,rgb(223, 214, 214) , #111);*/
+    background: #eee;;
     color: #111;
     padding: 50px;
 }
@@ -278,13 +280,12 @@ a:hover{
 .client {
     display: inline-block;
     width: 60%;
-    border: 5px solid rgb(17, 14, 14);
-    box-shadow: 5px 5px;
+   
 }
 
 #mvl {
     width: 100%;
-    background-color: #F8F8FF;
+    background-color: #eee;
     color: #000;
     padding: 60px;
     
@@ -300,8 +301,8 @@ a:hover{
 
 #features {
     width: 100%;
-    background-color: rgb(224, 218, 218);
-    color: #eee;
+    background-color: #eee;
+    color: rgb(7, 7, 7);
     padding: 50px;
 }
 
@@ -316,7 +317,7 @@ a:hover{
     margin: 2%;
     display: flex;
     flex-direction: column;
-    background: #333;
+    background: #567EBB;
     padding: 20px;
     border-radius: 5px;
 }
@@ -391,7 +392,7 @@ a:hover{
     margin: 2%;
     display: flex;
     flex-direction: column;
-    background: #333;
+    background: #eee;;
     padding: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -410,7 +411,7 @@ a:hover{
 
 /*product*/
 #product {
-    background-color: #eee;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 50px;
 }
@@ -440,12 +441,11 @@ a:hover{
 }
 
 /* Testimonials */
-
 .testimonial {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    background: #333;
+    background: #567EBB;
     padding: 15px;
     margin: 15px 0;
     border-radius: 5px;
@@ -453,7 +453,7 @@ a:hover{
 
 #testimonials {
     width: 100%;
-    background: rgb(219, 213, 213);;
+    background: #eee;
     color: rgb(0, 0, 0);
     padding: 50px;
 }
@@ -475,7 +475,7 @@ a:hover{
 
 #devs {
     width: 100%;
-    background-color: #F8F8FF;
+    background-color: #eee;
     color: rgb(0, 0, 0);
     padding: 50px;
 }
@@ -492,7 +492,7 @@ a:hover{
 .dev {
     display: flex;
     flex-direction: column;
-    background: #EEE9E9;
+    background: #606D80;
     padding: 20px;
     border-radius: 5px;
     margin: 10%;
@@ -508,9 +508,10 @@ a:hover{
 /*Gallery*/
 
 #gallery {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 20px;
+    background: #eee;
 }
 
 #gallery-container {
