@@ -162,8 +162,8 @@ a:hover{
 /*navbar*/
 #navbar {
     width: 100%;
-    background: #1f1f20b6;
-    color: whitesmoke;
+    background: #2a97d6a9;
+    color: rgb(245, 245, 245);
     height: 68px;
   
 }
@@ -175,15 +175,23 @@ a:hover{
    display: flex;
    justify-content: space-between;
    align-items: center;
+
 }
 
+#navbar-container h3 a{
+   color: #eee;
+ 
+ }
+
 #navbar-items {
+ 
     display: flex;
     list-style: none;
     text-transform: uppercase;
 }
 
-#navbar-items li {
+#navbar-items li a {
+    color: #eee;
     padding: 10px;
 }
 
@@ -219,7 +227,7 @@ a:hover{
    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(4px);
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     padding: 20px 40px;
   }
 
@@ -285,7 +293,7 @@ a:hover{
 
 #mvl {
     width: 100%;
-    background-color: #eee;
+    background-color: rgb(255, 255, 255);
     color: #000;
     padding: 60px;
     
@@ -317,7 +325,7 @@ a:hover{
     margin: 2%;
     display: flex;
     flex-direction: column;
-    background: #567EBB;
+    background: #109ae9e1;;
     padding: 20px;
     border-radius: 5px;
 }
@@ -372,7 +380,6 @@ a:hover{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(7, 7, 7);
 }
-
 /*services*/
 #services {
     width: 100%;
@@ -392,7 +399,7 @@ a:hover{
     margin: 2%;
     display: flex;
     flex-direction: column;
-    background: #eee;;
+    background: #1099e9;
     padding: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -445,7 +452,7 @@ a:hover{
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    background: #567EBB;
+    background: #1099e9;;
     padding: 15px;
     margin: 15px 0;
     border-radius: 5px;
@@ -492,7 +499,8 @@ a:hover{
 .dev {
     display: flex;
     flex-direction: column;
-    background: #606D80;
+    background: #eee;
+
     padding: 20px;
     border-radius: 5px;
     margin: 10%;

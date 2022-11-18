@@ -8,15 +8,6 @@ body *{
     box-sizing: border-box;
 }
 
-
-#navbar {
-    width: 100%;
-    background: whitesmoke;
-    color: rgb(31, 29, 29);
-    height: 80px;
-    
-}
-
 /*Mensagem email ou senha invalidos!*/
 #snackbarss {
   visibility: hidden;
@@ -249,29 +240,11 @@ body *{
     color: #8d0000;
   }
 
-#navbar-container {
-   width: 80%;
-   height: 100%;
-   margin: auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-
-#navbar-items {
-    display: flex;
-    list-style: none;
-    text-transform: uppercase;
-}
-
-#navbar-items li {
-    padding: 10px;
-}
-
 
 .main-login{
     width: 100vw;
     height: 100vh;
+    background: #eee;
     /*background-image: linear-gradient(to right,rgb(201, 47, 47) rgb(91, 112, 133)11);*/
     display: flex;
     justify-content: center;
@@ -437,29 +410,6 @@ a:hover{
     .card-login{
         width: 90%;
     }
-
-    #navbar{
-        height: 60%;
-     }
-     
-     #navbar-container{
-         flex-direction: column;
-         padding: 20px 0;
-     }
-     
-     #navbar-items {
-         flex-direction: column;
-         text-align: center;
-         width: 100%;
-         padding: 0;
-     }
-     
-     #navbar-items li:nth-child(2){
-         border-top: 1px solid #333;
-         
-         border-bottom: 1px solid #333;
-     }
-
 
     
      

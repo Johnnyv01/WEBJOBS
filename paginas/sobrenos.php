@@ -55,23 +55,23 @@
                 <p>Desenvolvedor de Software</p>
             </div>
             <div class="dev">
-                <h1>Kauan Alexandre</h1><br>
                 <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+                <h1>Kauan Alexandre</h1><br>
                 <p>Programador web</p>
             </div>
             <div class="dev">
+                <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
                 <h1>Gabriel Freitas</h1><br>
-                <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
                 <p>Analista de sistemas</p>
             </div>
             <div class="dev">
+                <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
                 <h1>Thaís Huertas</h1><br>
-                <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
                 <p>Analista de sistemas</p>
             </div>
             <div class="dev">
-                <h1>Rian Neris</h1><br>
                 <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+                <h1>Rian Neris</h1><br>
                 <p>DBA</p>
             </div>
         </div>

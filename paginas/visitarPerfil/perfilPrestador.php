@@ -26,6 +26,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/perfilPrestador.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="fontawesome-6.2.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -42,7 +43,7 @@
             }
         }
 
-        req.open('GET','chat.php', true);
+        req.open('GET','../chat/chat.php', true);
         req.send();
     }
     setInterval(function(){ajax();}, 1000);
@@ -52,6 +53,18 @@
 </head>
 
 <body>
+
+<nav id="navbar">
+        <div id="navbar-container">
+            <h3 class="logo"> WEB JOBS</h3>
+            <ul id="navbar-items">
+                <li><a href="sobrenos.php"> Sobre Nós </a></li>
+                <li><a href="servicos.php"> Serviços </a></li>
+                <li><a href="login.php?variavel">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
