@@ -32,7 +32,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE cadastro (
   cdo_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  cdo_arq_id
+  cdo_arq_id BIGINT NOT NULL,
   cdo_adm_Id BIGINT NOT NULL,
   cdo_src_id BIGINT NOT NULL,
   cdo_nomecompleto varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -135,7 +135,7 @@ CREATE TABLE tb_chat (
   nome VARCHAR(100) NOT NULL,
   mensagem VARCHAR(100) NOT NULL,
   data  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP()
-)
+);
 
 CREATE TABLE arquivos (
   id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,

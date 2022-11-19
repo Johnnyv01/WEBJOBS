@@ -79,17 +79,10 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 ?>
 
 
-</style>
-<script src="jquery/jquery-1.8.1.min.js"></script>
-<script>
-function carregar(enviar) {
-    $.ajax({url: '/chat.php?',
-        success: function(retorno) {
-            $('#result').html(retorno);
-        }
-    });
-}
-</script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -372,11 +365,11 @@ function carregar(enviar) {
 
                                         <form method="POST">
 
-                                            <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
+                                            <textarea name="mensagem" id="txtComentario" placeholder="Insira uma mensagem"></textarea>
 
-                                            <input type="submit" name="enviar" value="Enviar" onkeyup="carregar(this.value)" autofocus="autofocus" id="caixa-pesquisa">
+                                        
+                                        <input type="button" name="enviar" value="Enviar" onclick="carregar(mensagem.value)" autofocus="autofocus" id="caixa-pesquisa">
                                         </form>
-
                                         <?php
                                         if (isset($_POST['enviar'])) {
                                             $nome = $user_data['cdo_nomecompleto'];
@@ -478,6 +471,19 @@ function carregar(enviar) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+<script>
+    function carregar(enviar) {
+
+$.ajax({
+    url: "../chat/chat.php?texto="+enviar,
+    success: function (response) {
+        console.log(response);
+    }
+});
+
+}
+</script>
 </body>
 
 </html>
