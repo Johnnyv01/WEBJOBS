@@ -77,6 +77,20 @@ if (isset($_FILES['arquivos'])) {
 
 $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 ?>
+
+
+</style>
+<script src="jquery/jquery-1.8.1.min.js"></script>
+<script>
+function carregar(enviar) {
+    $.ajax({url: '/chat.php?',
+        success: function(retorno) {
+            $('#result').html(retorno);
+        }
+    });
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -90,33 +104,37 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <link rel="stylesheet" href="fontawesome-6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../chat/styles.css">
     <script type="text/javascript" src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
     <script type="text/javascript">
-        $(window).bind("beforeunload", function() {
-            if ($("#myModal").is(":visible")) {
-                return "Você não salvou a sua tarefa, gostaria mesmo de sair?";
-            }
-        });
+    $(window).bind("beforeunload", function() {
+        if ($("#myModal").is(":visible")) {
+            return "Você não salvou a sua tarefa, gostaria mesmo de sair?";
+        }
+    });
     </script>
 
     <script type="text/javascript">
-        function ajax() {
-            var req = new XMLHttpRequest();
-            req.onreadystatechange = function() {
-                if (req.readyState == 4 && req.status == 200) {
-                    document.getElementById('chat').innerHTML =
-                        req.responseText;
-                }
+    function ajax() {
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function() {
+            if (req.readyState == 4 && req.status == 200) {
+                document.getElementById('chat').innerHTML =
+                    req.responseText;
             }
-
-            req.open('GET', '../chat/chat.php', true);
-            req.send();
         }
-        setInterval(function() {
-            ajax();
-        }, 1000);
+
+        req.open('GET', '../chat/chat.php', true);
+        req.send();
+    }
+    setInterval(function() {
+        ajax();
+    }, 1000);
     </script>
     <title>Perfil</title>
 </head>
@@ -130,12 +148,15 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                 <li><a href=""></a></li>
 
                 <div class="dropdown">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" color="#00bfff" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" color="#00bfff" fill="currentColor"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                        <path fill-rule="evenodd"
+                            d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
                         <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                     </svg>
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu">
@@ -276,13 +297,15 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                             <?php
                             while ($arquivo = $sqlQuery->fetch_assoc()) {
                             ?>
-                                <div class="coluna">
-                                    <a href="<?php echo $arquivo['path']; ?>" target="_blank">
-                                        <img width="150px" ; height="150px" ; src="<?php echo $arquivo['path']; ?>" alt="">
-                                    </a>
-                                    <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
-                                    <a id="link" href="perfilPrestador.php?atualizado=2&deletar=<?php echo $arquivo['id']; ?>"><i class="fa fa-trash"></i></a>
-                                </div>
+                            <div class="coluna">
+                                <a href="<?php echo $arquivo['path']; ?>" target="_blank">
+                                    <img width="150px" ; height="150px" ; src="<?php echo $arquivo['path']; ?>" alt="">
+                                </a>
+                                <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
+                                <a id="link"
+                                    href="perfilPrestador.php?atualizado=2&deletar=<?php echo $arquivo['id']; ?>"><i
+                                        class="fa fa-trash"></i></a>
+                            </div>
 
 
                             <?php
@@ -290,17 +313,20 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                             ?>
                         </div>
                         <!-- Modal Fotos -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Enviar Foto</h5>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                            aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="POST" enctype="multipart/form-data" action="perfilPrestador.php?atualizado=3">
+                                        <form method="POST" enctype="multipart/form-data"
+                                            action="perfilPrestador.php?atualizado=3">
                                             <div>
                                                 <label for="arquivo">Selecione um aqurivo</label>
                                                 <input multiple name="arquivos[]" type="file" id="arquivo">
@@ -309,7 +335,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
                                         <button class="enviar" name="upload" type="submit">Enviar</button></a>
                                     </div>
                                     </form>
@@ -326,12 +353,14 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                             rem quaerat saepe alias ut earum quia. Illo.</p>
                     </div>
                     <!-- Modal  Chat-->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">CHAT </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div id="conteudo">
@@ -344,8 +373,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         <form method="POST">
 
                                             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
-                                            
-                                           <input type="submit" name="enviar" value="Enviar">
+
+                                            <input type="submit" name="enviar" value="Enviar" onkeyup="carregar(this.value)" autofocus="autofocus" id="caixa-pesquisa">
                                         </form>
 
                                         <?php
@@ -357,14 +386,28 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                             if ($executar) {
                                                 echo "<embed loop='false' src='beep.mp3'hidden='true' autoplay='true'>";
                                             }
+                                            
                                         }
 
                                         ?>
+                                      <?php
+                                            if(isset($_GET['enviar'])){
+                                                $enviar = $_GET['enviar'];
+                                                echo "<script>carregar(\"$enviar\");$('input:text').val(\"$enviar\");;</script>";
+                                            }else{
+                                                $enviar="";
+                                            }
+                                            ?>
+
+                                        <div id="result"></div>
+
+                                       
 
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -378,57 +421,63 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     </div>
 
     <script>
-        function checaCookie() {
+    function checaCookie() {
 
+        staticBackdrop();
+        if (navigator.cookieEnabled == true)
             staticBackdrop();
-            if (navigator.cookieEnabled == true)
-                staticBackdrop();
-            else
-                alert("Cookies bloqueados")
-        }
+        else
+            alert("Cookies bloqueados")
+    }
     </script>
 
     <?php
     $var = $TudoCerto;
     ?>
     <script>
-        <?php
+    <?php
         echo "var jsvar ='$var';";
         ?>
-        console.log(jsvar);
+    console.log(jsvar);
     </script>
     <div id="snackbarss">Imagem foi adicionada a galeria com sucesso!!</div>
     <div id="snackbars">Imagem excluida com sucesso!!</div>
     <div id="snackbar">Dados do usuario foram atualizados com sucesso!!</div>
     <script type="text/javascript">
-        if (jsvar == 1) {
-            var x = document.getElementById("snackbar");
-            x.className = "show";
-            setTimeout(function() {
-                x.className = x.className.replace("show", "");
-            }, 3000);
-        } else if (jsvar == 2) {
-            var x = document.getElementById("snackbars");
-            x.className = "show";
-            setTimeout(function() {
-                x.className = x.className.replace("show", "");
-            }, 3000);
-        } else if (jsvar == 3) {
-            var x = document.getElementById("snackbarss");
-            x.className = "show";
-            setTimeout(function() {
-                x.className = x.className.replace("show", "");
-            }, 3000);
-        }
+    if (jsvar == 1) {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    } else if (jsvar == 2) {
+        var x = document.getElementById("snackbars");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    } else if (jsvar == 3) {
+        var x = document.getElementById("snackbarss");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    }
     </script>
 
 
 
 
     <script src="./js/perfil.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

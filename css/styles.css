@@ -162,7 +162,7 @@ a:hover{
 /*navbar*/
 #navbar {
     width: 100%;
-    background: #2a97d6a9;
+    background: #02090ea9;
     color: rgb(245, 245, 245);
     height: 68px;
   
@@ -209,13 +209,14 @@ a:hover{
 
 #showcase-container {
     flex: 1;
-    margin-top: 20%;
+    margin-top: 15%;
     width: 65%;
     height: 40%; 
     padding: 1.5%;
     border: 5px solid rgb(17, 14, 14);
     background-size: cover;
     background: rgba(255, 255, 255, 0.575);
+    
 }
 
 
