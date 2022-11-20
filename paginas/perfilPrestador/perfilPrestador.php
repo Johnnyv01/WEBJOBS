@@ -132,8 +132,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     <title>Perfil</title>
 </head>
 
-<body onload="checaCookie()">
-
+<body >
     <nav id="navbar">
         <div id="navbar-container">
             <h1 class="logo"> WEB JOBS</h1>
@@ -240,8 +239,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
                     </script>
                     <div class="profile-btn">
-                        <button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-
+                        <!--<button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
+                        <button type="button" class="chatbtn" onclick="window.location.href='../chat/index.php'">
                             <i class="fa fa-comment"></i>Chat
                         </button>
                         <!-- Button trigger modal -->
@@ -285,7 +284,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                 <div class="profile-body">
                     <div class="perfil-posts tab">
                         <div class="galery">
-                            <h1 class="titulo">Galeria de Fotos</h1>
+                            <h1 class="titulo">Portifólio</h1>
 
                             <?php
                             while ($arquivo = $sqlQuery->fetch_assoc()) {
@@ -365,10 +364,9 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
                                         <form method="POST">
 
-                                            <textarea name="mensagem" id="txtComentario" placeholder="Insira uma mensagem"></textarea>
-
+                                         <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>
                                         
-                                        <input type="button" name="enviar" value="Enviar" onclick="carregar(mensagem.value)" autofocus="autofocus" id="caixa-pesquisa">
+                                        <input type="submit" name="enviar" value="Enviar">
                                         </form>
                                         <?php
                                         if (isset($_POST['enviar'])) {
@@ -383,19 +381,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         }
 
                                         ?>
-                                      <?php
-                                            if(isset($_GET['enviar'])){
-                                                $enviar = $_GET['enviar'];
-                                                echo "<script>carregar(\"$enviar\");$('input:text').val(\"$enviar\");;</script>";
-                                            }else{
-                                                $enviar="";
-                                            }
-                                            ?>
-
-                                        <div id="result"></div>
-
-                                       
-
+                                    
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -458,13 +444,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     }
     </script>
 
-
-
-
     <script src="./js/perfil.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
@@ -473,7 +453,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
     </script>
 
 <script>
-    function carregar(enviar) {
+  /*  function carregar(enviar) {
 
 $.ajax({
     url: "../chat/chat.php?texto="+enviar,
@@ -482,7 +462,7 @@ $.ajax({
     }
 });
 
-}
+}*/
 </script>
 </body>
 

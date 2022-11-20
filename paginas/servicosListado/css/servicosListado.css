@@ -13,5 +13,47 @@
     
 }
 
+#foto{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+/*navbar*/
+#navbar {
+    width: 100%;
+    background: #02090eca;
+    color: rgb(245, 245, 245);
+    height: 68px;
+    margin-top: -8%;
+  
+}
+
+#navbar-container {
+   width: 80%;
+   height: 100%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+#navbar-container h3 a{
+   color: #eee;
+ 
+ }
+
+#navbar-items {
+ 
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#navbar-items li a {
+    color: #eee;
+    padding: 10px;
+}
 
     

@@ -13,7 +13,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
         $cdo_email = $conexao->real_escape_string($_POST['cdo_email']);
         $cdo_senha = $conexao->real_escape_string($_POST['cdo_senha']);
 
-        $sql_code = "SELECT * FROM `cadastro` WHERE `cdo_email` = '$cdo_email' AND `cdo_senha` = '$cdo_senha'";
+        $sql_code = "SELECT * FROM `cadastro` WHERE `cdo_email` = '$cdo_email' AND `cdo_senha` = '$cdo_senha'"; 
 
         ($sql_query = $conexao->query($sql_code)) or
             die('Falha na execucao do codigo sql: ' . $conexao->error);

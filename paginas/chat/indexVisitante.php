@@ -1,17 +1,6 @@
 <?php
 include('../connect.php');
-session_start();
 
-if (!isset($_SESSION['cdo_id'])) {
-    header("Location: ../login.php?erro=true");
-    exit;
-} else if (isset($_SESSION['cdo_id'])) {
-    $dados = $_SESSION['cdo_id'];
-    $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
-    $result = $conexao->query($consulta);
-    $user_data = mysqli_fetch_assoc($result);
-   
-}
 
 ?>
 <!DOCTYPE html>
@@ -55,15 +44,14 @@ if (!isset($_SESSION['cdo_id'])) {
         </div>
 
         <form method="POST"> 
-            
-           
+            <input type="text" name="nome" placeholder="Preencha seu nome">
             <textarea name="mensagem" placeholder="Insira uma mensagem"></textarea>    
             <input type="submit" name="enviar" value="Enviar">
         </form>
 
         <?php
         if(isset($_POST['enviar'])){
-            $nome = $user_data['cdo_nomecompleto'];
+            $nome = $_POST['nome'];
             $mensagem = $_POST['mensagem'];
             $consulta = "INSERT INTO tb_chat (nome, mensagem) VALUES 
             ('$nome', '$mensagem')";

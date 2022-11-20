@@ -46,6 +46,17 @@ if (!isset($_GET['cdo_profissao'])) {
 
 <body>
 
+<nav id="navbar">
+    <div id="navbar-container">
+      <h3 class="logo"><a href="../index.php"> WEB JOBS</a></h3>
+      <ul id="navbar-items">
+        <li><a href="../sobrenos.php"> Sobre Nós </a></li>
+        <li><a href="../servicos.php"> Serviços </a></li>
+        <li><a href="../login.php?variavel">Entrar</a></li>
+      </ul>
+    </div>
+  </nav>
+
     <br><br>
     <?php while ($dadoss = $sql_query->fetch_assoc()) : ?>
         
@@ -82,7 +93,7 @@ if (!isset($_GET['cdo_profissao'])) {
                 <div class="span2">
                     <div class="btn-group">
                             
-                        <a href='../visitarPerfil/perfilPrestador.php?email=<?php echo $dadoss['cdo_email']?>' class="btn btn-primary">Visitar Perfil</a> -->
+                        <a href='../visitarPerfil/perfilPrestador.php?id=<?php echo $dadoss['cdo_id']?>' class="btn btn-primary">Visitar Perfil</a> -->
 
                     </div>
                 </div>
