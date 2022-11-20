@@ -10,7 +10,7 @@ if (!isset($_SESSION['cdo_id'])) {
     $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
-   
+    
 }
 
 ?>
@@ -34,7 +34,7 @@ if (!isset($_SESSION['cdo_id'])) {
             }
         }
 
-        req.open('GET','chat.php', true);
+        req.open('GET','chat.php?id=<?php echo $user_data['cdo_id'] ?>', true);
         req.send();
     } 
 
@@ -65,8 +65,9 @@ if (!isset($_SESSION['cdo_id'])) {
         if(isset($_POST['enviar'])){
             $nome = $user_data['cdo_nomecompleto'];
             $mensagem = $_POST['mensagem'];
-            $consulta = "INSERT INTO tb_chat (nome, mensagem) VALUES 
-            ('$nome', '$mensagem')";
+            $idPrestador = $user_data['cdo_id'];
+            $consulta = "INSERT INTO tb_chat (nome,id_cadastro, mensagem) VALUES 
+            ('$nome',$idPrestador, '$mensagem')";
             $executar = $conexao->query($consulta); 
             if($executar){
                 echo"<embed loop='false' src='beep.mp3'

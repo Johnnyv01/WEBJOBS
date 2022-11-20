@@ -32,9 +32,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE cadastro (
   cdo_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  cdo_arq_id BIGINT NOT NULL,
-  cdo_adm_Id BIGINT NOT NULL,
-  cdo_src_id BIGINT NOT NULL,
+  cdo_arq_id INT NOT NULL,
+  cdo_adm_Id INT NOT NULL,
+  cdo_src_id INT NOT NULL,
   cdo_nomecompleto varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_profissao varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_email varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE social (
   src_cdo_id int NOT NULL,
   src_rede_social varchar(45) NOT NULL,
   src_link_social varchar(80) NOT NULL,
-  FOREIGN KEY (src_cdo_id) REFERENCES cadastro  (cdo_id)
+  FOREIGN KEY (src_cdo_id) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -133,15 +133,19 @@ CREATE TABLE usuarios (
 CREATE TABLE tb_chat (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
+  id_cadastro INT NOT NULL,
   mensagem VARCHAR(100) NOT NULL,
-  data  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP()
+  data  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 );
 
 CREATE TABLE arquivos (
   id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_cadastro INT NOT NULL,
   nome varchar(150) NOT NULL,
   path varchar(100) NOT NULL,
-  data_upload datetime NOT NULL DEFAULT current_timestamp()
+  data_upload datetime NOT NULL DEFAULT current_timestamp(),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

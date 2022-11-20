@@ -7,16 +7,17 @@ session_start();
 $TudoCerto = $_GET['atualizado'];
 
 if (!isset($_SESSION['cdo_id'])) {
-    header("Location: ../login.php?erro=true");
+    header("Location: ../login.php?variavel&erro=true");
     exit;
 } else if (isset($_SESSION['cdo_id'])) {
     $dados = $_SESSION['cdo_id'];
     $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
+    $GLOBALS = $dados;
 }
 
-
+echo $GLOBALS;
 
 if (isset($_GET['deletar'])) {
 
@@ -31,8 +32,10 @@ if (isset($_GET['deletar'])) {
     }
 }
 
-function enviarAquivo($error, $size, $name, $tmp_name)
-{
+
+
+function enviarAquivo($error, $size, $name, $tmp_name){
+
     include("../connect.php");
 
     if ($error)
@@ -41,6 +44,8 @@ function enviarAquivo($error, $size, $name, $tmp_name)
     if ($size > 2097152)
         die("Arquivo muito grande!! Max: 2MB");
 
+    $idCadastro = $GLOBALS;
+    echo $idCadastro;
     $pasta = "arquivos/";
     $nomeArquivo = $name;
     $novoNomeArquivo = uniqid();
@@ -51,8 +56,9 @@ function enviarAquivo($error, $size, $name, $tmp_name)
 
     $path = $pasta . $novoNomeArquivo . "." . $extensao;
     $deuCerto = move_uploaded_file($tmp_name, $path);
+    
     if ($deuCerto) {
-        $conexao->query("INSERT INTO arquivos (nome, path)VALUES ('$nomeArquivo','$path')") or die($conexao->error);
+        $conexao->query("INSERT INTO arquivos (id_cadastro,nome, path)VALUES ('$idCadastro','$nomeArquivo','$path')") or die($conexao->error);
         return true;
     } else
         return false;
@@ -75,7 +81,7 @@ if (isset($_FILES['arquivos'])) {
 }
 
 
-$sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
+$sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS'") or die($conexao->error);
 ?>
 
 
@@ -122,7 +128,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
             }
         }
 
-        req.open('GET', '../chat/chat.php', true);
+        req.open('GET', '../chat/chat.php?id=2', true);
         req.send();
     }
     setInterval(function() {
@@ -240,7 +246,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                     </script>
                     <div class="profile-btn">
                         <!--<button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
-                        <button type="button" class="chatbtn" onclick="window.location.href='../chat/index.php'">
+                        <button type="button" class="chatbtn" onclick="window.location.href='../chat/index.php?id=<?php echo $GLOBALS?>'">
                             <i class="fa fa-comment"></i>Chat
                         </button>
                         <!-- Button trigger modal -->
@@ -368,21 +374,23 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
                                         
                                         <input type="submit" name="enviar" value="Enviar">
                                         </form>
+                                        
+                                        <!-- Esse bloco de codigo é referente a modal nao implementada com sucesso!-->
                                         <?php
+                                       
                                         if (isset($_POST['enviar'])) {
                                             $nome = $user_data['cdo_nomecompleto'];
                                             $mensagem = $_POST['mensagem'];
-                                            $consulta = "INSERT INTO tb_chat (nome, mensagem) VALUES ('$nome', '$mensagem')";
+                                            $idPrestador = $GLOBALS;
+                                            $consulta = "INSERT INTO tb_chat (nome,id_cadastro, mensagem) VALUES ('$nome',$idPrestador,'$mensagem')";
                                             $executar = $conexao->query($consulta);
                                             if ($executar) {
                                                 echo "<embed loop='false' src='beep.mp3'hidden='true' autoplay='true'>";
                                             }
-                                            
-                                        }
 
+                                        }
                                         ?>
-                                    
-                                    </div>
+                                      
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"

@@ -1,7 +1,6 @@
 <?php
 include('../connect.php');
-
-
+$idPrestador = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@ include('../connect.php');
             }
         }
 
-        req.open('GET','chat.php', true);
+        req.open('GET','chat.php?id=<?php echo $idPrestador ?>', true);
         req.send();
     } 
 
@@ -53,8 +52,8 @@ include('../connect.php');
         if(isset($_POST['enviar'])){
             $nome = $_POST['nome'];
             $mensagem = $_POST['mensagem'];
-            $consulta = "INSERT INTO tb_chat (nome, mensagem) VALUES 
-            ('$nome', '$mensagem')";
+            $consulta = "INSERT INTO tb_chat (nome,id_cadastro, mensagem) VALUES 
+            ('$nome',$idPrestador, '$mensagem')";
             $executar = $conexao->query($consulta); 
             if($executar){
                 echo"<embed loop='false' src='beep.mp3'

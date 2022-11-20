@@ -2,7 +2,9 @@
 
 include "bd.php";
 
-            $consulta = "SELECT * FROM tb_chat ORDER BY id DESC";
+$id = $_GET['id'];
+
+            $consulta = "SELECT * FROM tb_chat WHERE id_cadastro = '$id' ORDER BY id DESC";
             $executar = $conexion-> query($consulta);
             while($linha = $executar-> fetch_array()):
             ?> 

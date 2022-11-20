@@ -14,7 +14,7 @@ $resultado2 = $conexao->query($consulta2);
 $user_data2 = mysqli_fetch_assoc($resultado2);
 
 
-$sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
+$sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro = '$retorno' ") or die($conexao->error);
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +103,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
         <div class="profile-side">
           <p class="mobile-no"><i class="fa fa-phone"></i>
             <?php
-            echo $user_data['cdo_telefone'] . "<br>"
+            echo $user_data['cdo_telefone'] . "<br>";
+            echo $user_data['cdo_id'];
             ?>
 
           </p>
@@ -125,7 +126,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
           </div>
 
           <div class="profile-btn">
-            <button type="button" class="chatbtn" onclick="window.location.href='../chat/indexVisitante.php'" target="_blank">
+            <button type="button" class="chatbtn" onclick="window.location.href='../chat/indexVisitante.php?id=<?php echo $user_data['cdo_id']?>'" target="_blank">
 
               <i class="fa fa-comment"></i>Chat
             </button>
