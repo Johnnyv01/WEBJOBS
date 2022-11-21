@@ -298,7 +298,7 @@ body *{
     border-radius: 20px;
     box-shadow: 0px 10px 40px #111;
 }
-
+/* background: #109ae9e1;*/
 .card-login > h1 {
     color: rgb(255, 255, 255);
     font-weight: 800;
