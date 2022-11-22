@@ -6,6 +6,12 @@
     
 }
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .container-fluid.well.span6{
     width: 1000px;
     display: grid;
@@ -25,8 +31,7 @@
     background: #02090eca;
     color: rgb(245, 245, 245);
     height: 68px;
-    margin-top: -8%;
-  
+   
 }
 
 #navbar-container {

@@ -102,9 +102,8 @@ if (!isset($_GET['cdo_profissao'])) {
         </div>
     <?php endwhile; ?>
 
-
-
-
 </body>
+
+ 
 
 </html>

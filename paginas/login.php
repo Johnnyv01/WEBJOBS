@@ -133,8 +133,8 @@ $var = $TudoCerto;
 </body>
 
 
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+ <!-- Footer -->
+ <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
@@ -183,16 +183,12 @@ $var = $TudoCerto;
             Ficou alguma duvida, entre em contato vamos adorar te conhecer
           </p>
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            MENU
+           MENU
           </h6>
           <p>
             <a href="#!" class="text-reset">Sobre nos</a>
@@ -219,7 +215,7 @@ $var = $TudoCerto;
             webjobs@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 55 9234 567 88</p>
-
+         
         </div>
         <!-- Grid column -->
       </div>
