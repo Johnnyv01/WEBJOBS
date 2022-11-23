@@ -26,6 +26,8 @@
         }
     </script>
 
+<?php echo "Esse é o meu ip olha ". $_SERVER['REMOTE_ADDR']; ?> 
+
     <nav id="navbar">
         <div id="navbar-container">
             <h3 class="logo"> WEB JOBS</h3>
