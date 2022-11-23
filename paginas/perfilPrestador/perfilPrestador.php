@@ -170,9 +170,9 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
-                <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>"; ?>
-
-                <nav id="navs">
+                <img src="img/image-perfil.jpg" alt="Selecione uma imagem" id="imgPhoto">
+            
+                <!--<nav id="navs">
                     <ul id="foto">
                         <li><img src="img/cam.png" width="200px" id="cam">
                             <ul>
@@ -181,7 +181,9 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
                             </ul>
                         </li>
                     </ul>
-                </nav>
+                </nav>-->
+                <input type="file" id="flImage" name="flImage" accept="image/*">
+                <script src="js/script.js"></script>
             </div>
 
             <!-- camera -->

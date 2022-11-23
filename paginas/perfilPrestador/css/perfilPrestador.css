@@ -332,7 +332,7 @@ body{
 }
 .profile-img img:hover{
     background-color: aliceblue;
-    border: 5px solid rgba(71, 71, 71, 0.692);
+    border: 5px solid rgba(0, 0, 0, 0.692);
 }
 
 .profile-nav-info{
