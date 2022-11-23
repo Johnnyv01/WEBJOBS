@@ -32,9 +32,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE cadastro (
   cdo_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  cdo_arq_id INT NOT NULL,
-  cdo_adm_Id INT NOT NULL,
-  cdo_src_id INT NOT NULL,
   cdo_nomecompleto varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_profissao varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   cdo_email varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -63,9 +60,11 @@ CREATE TABLE cadastro (
 
 CREATE TABLE administradores (
   adm_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   adm_cdo_id int NOT NULL,
   adm_permissao varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  FOREIGN KEY (adm_cdo_id) REFERENCES cadastro (cdo_id)
+  FOREIGN KEY (adm_cdo_id) REFERENCES cadastro (cdo_id),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 -- --------------------------------------------------------
 
@@ -75,6 +74,7 @@ CREATE TABLE administradores (
 
 CREATE TABLE endereco (
   edc_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   edc_cdo_id int NOT NULL,
   edc_cep varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   edc_rua varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -83,7 +83,8 @@ CREATE TABLE endereco (
   edc_bairro varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   edc_uf varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   edc_complemento varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  FOREIGN KEY (edc_cdo_id) REFERENCES cadastro (cdo_id)
+  FOREIGN KEY (edc_cdo_id) REFERENCES cadastro (cdo_id),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -94,13 +95,15 @@ CREATE TABLE endereco (
 
 CREATE TABLE servicos (
   src_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   src_cdo_id int NOT NULL,
   src_skills varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   src_foto varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   src_servicos_prestados varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   src_experiencia varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   src_recomendacoes varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  FOREIGN KEY (src_cdo_id) REFERENCES cadastro (cdo_id)
+  FOREIGN KEY (src_cdo_id) REFERENCES cadastro (cdo_id),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -111,10 +114,12 @@ CREATE TABLE servicos (
 
 CREATE TABLE social (
   src_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   src_cdo_id int NOT NULL,
   src_rede_social varchar(45) NOT NULL,
   src_link_social varchar(80) NOT NULL,
-  FOREIGN KEY (src_cdo_id) REFERENCES cadastro (cdo_id)
+  FOREIGN KEY (src_cdo_id) REFERENCES cadastro (cdo_id),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -125,15 +130,17 @@ CREATE TABLE social (
 
 CREATE TABLE usuarios (
   usr_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   usr_cdo_id int NOT NULL,
   usr_usuario varchar(200) NOT NULL,
-  FOREIGN KEY (usr_cdo_id) REFERENCES cadastro (cdo_id)
+  FOREIGN KEY (usr_cdo_id) REFERENCES cadastro (cdo_id),
+  FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE tb_chat (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_cadastro int not null,
   nome VARCHAR(100) NOT NULL,
-  id_cadastro INT NOT NULL,
   mensagem VARCHAR(100) NOT NULL,
   data  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
@@ -148,23 +155,5 @@ CREATE TABLE arquivos (
   FOREIGN KEY (id_cadastro) REFERENCES cadastro (cdo_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Índices para tabelas despejadas
---
 
---
--- Índices para tabela `arquivos`
---
-ALTER TABLE `arquivos`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `arquivos`
---
-ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 

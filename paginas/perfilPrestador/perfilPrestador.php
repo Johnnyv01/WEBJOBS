@@ -14,8 +14,9 @@ if (!isset($_SESSION['cdo_id'])) {
     $consulta = "SELECT * FROM CADASTRO WHERE cdo_id = '$dados'";
     $result = $conexao->query($consulta);
     $user_data = mysqli_fetch_assoc($result);
-    $GLOBALS = $dados;
+    $GLOBALS['dados'] = $GLOBALS['dados'];
 }
+echo $GLOBALS['dados'];
 
 if (isset($_GET['deletar'])) {
 
@@ -42,7 +43,7 @@ function enviarAquivo($error, $size, $name, $tmp_name){
     if ($size > 2097152)
         die("Arquivo muito grande!! Max: 2MB");
 
-    $idCadastro = $GLOBALS;
+    $idCadastro = $GLOBALS['dados'];
     echo $idCadastro;
     $pasta = "arquivos/";
     $nomeArquivo = $name;
@@ -79,7 +80,7 @@ if (isset($_FILES['arquivos'])) {
 }
 
 
-$sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS'") or die($conexao->error);
+$sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS[dados]'") or die($conexao->error);
 ?>
 
 
@@ -246,7 +247,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
                     </script>
                     <div class="profile-btn">
                         <!--<button type="button" class="chatbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
-                        <button type="button" class="chatbtn" onclick="window.location.href='../chat/index.php?id=<?php echo $GLOBALS?>'">
+                           
+                        <button type="button" class="chatbtn" onclick="window.open('../chat/index.php?id=<?php echo $GLOBALS['dados']?>')" target = "_blank">
                             <i class="fa fa-comment"></i>Chat
                         </button>
                         <!-- Button trigger modal -->
@@ -381,7 +383,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
                                         if (isset($_POST['enviar'])) {
                                             $nome = $user_data['cdo_nomecompleto'];
                                             $mensagem = $_POST['mensagem'];
-                                            $idPrestador = $GLOBALS;
+                                            $idPrestador = $GLOBALS['dados'];
                                             $consulta = "INSERT INTO tb_chat (nome,id_cadastro, mensagem) VALUES ('$nome',$idPrestador,'$mensagem')";
                                             $executar = $conexao->query($consulta);
                                             if ($executar) {

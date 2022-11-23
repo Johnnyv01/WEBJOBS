@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost:3307';
+$host = 'localhost:8091';
 $usuario = 'root';
 $senha = '';
 $database = 'webjobs';

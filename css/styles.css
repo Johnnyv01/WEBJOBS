@@ -209,9 +209,11 @@ a:hover{
 
 #showcase-container {
     flex: 1;
-    margin-top: 10%;
     width: 65%;
     height: 40%; 
+    margin-top: 25vh;
+    align-items: center;
+    justify-content: center;
     padding: 1.5%;
     border: 5px solid rgb(17, 14, 14);
     background-size: cover;
