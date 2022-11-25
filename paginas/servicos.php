@@ -2,73 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="/paginas/css/mobile.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="/paginas/css/mobile.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <title>Serviços</title>
+  <title>Serviços</title>
 </head>
 
 <body>
-    <nav id="navbar">
-        <div id="navbar-container">
-            <h3> <a href="index.php"> WEB JOBS </a></h3>
-            <ul id="navbar-items">
-                <li><a href="sobrenos.php">Sobre Nós </a></li>
-                <li><a href="servicos.php">Serviços </a></li>
-                <li><a href="login.php?variavel">Entrar </a></li>
-            </ul>
-        </div>
-    </nav>
-    <section id="services">
-        <div class="headline">Categoria de serviços</div>
-        <div id="services-container">
-            <div class="service">
-                <i class="fa-solid fa-user-tie fa-3x"></i>
-                <span class="service-tittle">Pedreiro </span> <br>
-                <p>A área de Construção Civil abrange todas as atividades de produção de obras. Estão incluídas nesta
-                    área as atividades referentes às funções planejamento e projeto, execução e manutenção e restauração
-                    de obras em diferentes segmentos, tais como edifícios, estradas, portos, aeroportos, canais de
-                    navegação, túneis, instalações prediais, obras de saneamento, de fundações e de terra em geral,
-                    estando excluídas as atividades relacionadas às operações, tais como a operação e o gerenciamento de
-                    sistemas de transportes, a operação de estações de tratamento de água, de barragens etc
-                </p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-lock fa-3x"></i>
-                <span class="service-tittle"><a href="eletricista.php"> Eletricista </a></span> <br>
+  <nav id="navbar">
+    <div id="navbar-container">
+      <h3> <a href="index.php"> WEB JOBS </a></h3>
+      <ul id="navbar-items">
+        <li><a href="sobrenos.php">Sobre Nós </a></li>
+        <li><a href="servicos.php">Serviços </a></li>
+        <li><a href="login.php?variavel">Entrar </a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="services">
+    <div class="headline"> Serviços</div>
+    <div id="services-container">
+      <div class="service">
+        <i class="fa-solid fa-user-tie fa-3x"></i>
+        <span class="service-tittle">Pedreiro </span> <br>
+        <p>O pedreiro é o profissional da obra que atua na construção das etapas de fundação, paredes e acabamento. Ele deve ter conhecimento sobre o emprego de materiais, sobre ferramentas e equipamentos, sobre as técnicas utilizadas na construção, entre outros.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-lock fa-3x"></i>
+        <span class="service-tittle"><a href="eletricista.php"> Eletricista </a></span> <br>
 
-                <p>Realiza manutenção preventiva e corretiva, instalação de quadros de distribuição de força e analisa
-                    consumo de energia, ligação e desligamento de aparelhos elétricos e eletrônicos. Identifica defeitos
-                    elétricos para reparar ou substituir componentes, ajustando peças e simulando o funcionamento dos
-                    equipamentos.
-                </p>
-            </div>
-            <div class="service">
-                <i class="fas fa-layer-group fa-3x"></i>
-                <span class="service-tittle">Mecânico</span> <br>
-                <p>serviços de hidráulica são a realização de qualquer tipo de instalação hidráulica, o desenvolvimento
-                    de sistemas de combate a incêndio, que envolvem extintores, mangueiras e sprinklers, e também a
-                    manutenção de toda a rede hidráulica de um prédio.
-                </p>
-            </div>
-            <div class="service">
-                <i class="fas fa-layer-group fa-3x"></i>
-                <span class="service-tittle">Encanador</span> <br>
-                <p>Serviços de informática são um conjunto de ações que visam prevenir e solucionar problemas em
-                    computadores e notebooks, redes, banco de dados, software e hardware. Essas ações permitem auxiliar
-                    em análises, no gerenciamento de informações e na segurança dos dados coletados e armazenados.
-                </p>
-            </div>
-        </div>
-    </section>
-    
+        <p>Realiza manutenção preventiva e corretiva, instalação de quadros de distribuição de força e analisa
+          consumo de energia, ligação e desligamento de aparelhos elétricos e eletrônicos. Identifica defeitos
+          elétricos para reparar ou substituir componentes, ajustando peças e simulando o funcionamento dos
+          equipamentos.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fas fa-layer-group fa-3x"></i>
+        <span class="service-tittle">Mecânico</span> <br>
+        <p>Faz a manutenção corretiva e preventiva em máquinas e veículos, envolvendo a troca de peças e limpeza de componentes, consertos, revisão de freios, direção, regulagem de motores e suspensão.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fas fa-layer-group fa-3x"></i>
+        <span class="service-tittle">Encanador</span> <br>
+        <p>Monta, instala e conserva sistemas de tubulações de material metálico e não metálico de alta e baixa pressão para condução de ar, água, gás, vapor, esgoto, soluções químicas e outros fluídos em edifícios, laboratórios e outros locais
+        </p>
+      </div>
+    </div>
+  </section>
+
 </body>
 
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -123,7 +114,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-           MENU
+            MENU
           </h6>
           <p>
             <a href="#!" class="text-reset">Sobre nos</a>
@@ -150,7 +141,7 @@
             webjobs@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 55 9234 567 88</p>
-         
+
         </div>
         <!-- Grid column -->
       </div>

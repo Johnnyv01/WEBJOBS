@@ -26,7 +26,6 @@
         }
     </script>
 
-<?php echo "Esse é o meu ip:  ". $_SERVER['REMOTE_ADDR']; ?> 
 
     <nav id="navbar">
         <div id="navbar-container">
@@ -95,7 +94,7 @@
     <section id="product">
         <div class="headline">Nosso produto</div>
         <div id="product-container">
-            <img src="../imagens/img/iphonexr.jpg" alt="iphonexr">
+            <!--<img src="../imagens/img/iphonexr.jpg" alt="iphonexr">-->
             <div id="items">
                 <div class="item">
                     <i class="fa-solid fa-cloud fa-2x"></i>
