@@ -28,7 +28,7 @@
         <div id="services-container">
             <div class="service">
                 <i class="fa-solid fa-user-tie fa-3x"></i>
-                <span class="service-tittle">Construção civil </span> <br>
+                <span class="service-tittle">Pedreiro </span> <br>
                 <p>A área de Construção Civil abrange todas as atividades de produção de obras. Estão incluídas nesta
                     área as atividades referentes às funções planejamento e projeto, execução e manutenção e restauração
                     de obras em diferentes segmentos, tais como edifícios, estradas, portos, aeroportos, canais de
@@ -49,7 +49,7 @@
             </div>
             <div class="service">
                 <i class="fas fa-layer-group fa-3x"></i>
-                <span class="service-tittle">Serviços hidráulicos</span> <br>
+                <span class="service-tittle">Mecânico</span> <br>
                 <p>serviços de hidráulica são a realização de qualquer tipo de instalação hidráulica, o desenvolvimento
                     de sistemas de combate a incêndio, que envolvem extintores, mangueiras e sprinklers, e também a
                     manutenção de toda a rede hidráulica de um prédio.
@@ -57,7 +57,7 @@
             </div>
             <div class="service">
                 <i class="fas fa-layer-group fa-3x"></i>
-                <span class="service-tittle">Serviços em informática</span> <br>
+                <span class="service-tittle">Encanador</span> <br>
                 <p>Serviços de informática são um conjunto de ações que visam prevenir e solucionar problemas em
                     computadores e notebooks, redes, banco de dados, software e hardware. Essas ações permitem auxiliar
                     em análises, no gerenciamento de informações e na segurança dos dados coletados e armazenados.

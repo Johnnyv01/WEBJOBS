@@ -26,7 +26,7 @@
         }
     </script>
 
-<?php echo "Esse é o meu ip olha ". $_SERVER['REMOTE_ADDR']; ?> 
+<?php echo "Esse é o meu ip:  ". $_SERVER['REMOTE_ADDR']; ?> 
 
     <nav id="navbar">
         <div id="navbar-container">
@@ -136,9 +136,9 @@
         <div class="headline">Galeria</div>
         <div id="gallery-container">
             <img src="../imagens/img/encanador.jpg" alt="" class="gallery-image">
-            <img src="../imagens/img/image-3.jpeg" alt="" class="gallery-image">
-            <img src="../imagens/img/image-4.jpeg" alt="" class="gallery-image">
-            <img src="../imagens/img/image-5.jpeg" alt="" class="gallery-image">
+            <img src="../imagens/img/eletricista.jpeg" alt="" class="gallery-image">
+            <img src="../imagens/img/mecanico.jpeg" alt="" class="gallery-image">
+            <img src="../imagens/img/pedreiro.jpeg" alt="" class="gallery-image">
         </div>
     </section>
 
