@@ -132,7 +132,7 @@
 
 
     <section id="gallery">
-        <div class="headline">Galeria</div>
+        <div class="headline">Galeria de Serviços</div>
         <div id="gallery-container">
             <img src="../imagens/img/encanador.jpg" alt="" class="gallery-image">
             <img src="../imagens/img/eletricista.jpeg" alt="" class="gallery-image">

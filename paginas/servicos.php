@@ -59,7 +59,7 @@
 
 </body>
 
-<!-- Footer -->
+    <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -114,7 +114,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            MENU
+           MENU
           </h6>
           <p>
             <a href="#!" class="text-reset">Sobre nos</a>
@@ -141,7 +141,7 @@
             webjobs@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 55 9234 567 88</p>
-
+         
         </div>
         <!-- Grid column -->
       </div>

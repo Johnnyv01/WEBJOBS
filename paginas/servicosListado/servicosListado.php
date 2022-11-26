@@ -78,16 +78,17 @@ if (!isset($_GET['cdo_profissao'])) {
 
                     </h3>
 
-                    <h6>Categoria:
+                    <h4>Categoria:
                         <?php
                         echo $dadoss['cdo_profissao'] . "<br>";
                         ?>
-                    </h6>
-                    <h6>Avaliação: Sem Avaliações</h6>
+                    </h4>
+                    <h5>
                     <p class="resumo-card"> 
                         <?php
                           echo $dadoss['cdo_habilidades'] . "<br>";
-                          ?> <a href="#">More... </a></p>
+                          ?> 
+                    </h5>
                 </div>
 
                 <div class="span2">

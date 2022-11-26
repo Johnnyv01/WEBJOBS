@@ -16,7 +16,6 @@ if (!isset($_SESSION['cdo_id'])) {
     $user_data = mysqli_fetch_assoc($result);
     $GLOBALS['dados'] = $GLOBALS['dados'];
 }
-echo $GLOBALS['dados'];
 
 if (isset($_GET['deletar'])) {
 
@@ -140,7 +139,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
 <body >
     <nav id="navbar">
         <div id="navbar-container">
-            <h1 class="logo"> WEB JOBS</h1>
+        <h3> <a href="../index.php"> WEB JOBS </a></h3>
             <ul id="navbar-items">
                 <li><a href=""></a></li>
 
@@ -171,18 +170,8 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro ='$GLOBALS
     <div class="container">
         <div class="profile-header">
             <div class="profile-img">
-                <img src="img/image-perfil.jpg" alt="Selecione uma imagem" id="imgPhoto">
+            <?php echo "<img src=../$user_data[foto_doc] id='foto'></a>";?>
             
-                <!--<nav id="navs">
-                    <ul id="foto">
-                        <li><img src="img/cam.png" width="200px" id="cam">
-                            <ul>
-                                <li>Upload de foto</li>
-                                <li>Remover foto</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>-->
                 <input type="file" id="flImage" name="flImage" accept="image/*">
                 <script src="js/script.js"></script>
             </div>

@@ -297,7 +297,7 @@ body{
 }
 
 #navbar-items li a {
-    color: #eee;
+    color: rgb(0, 0, 0);
     padding: 10px;
 }
 
@@ -362,10 +362,11 @@ padding-top: 60px;
     margin-right: 5px;
 }
 
+
 .perfil-opcoes{
     width: 40px;
     height: 40px;
-    background: #109ae9e1;;
+    background: #e40046;
     position: absolute;
     right: 50px;
     top: 50%;
@@ -480,7 +481,7 @@ button.createbtn
     padding: 10px;
     width: 100%;
     border-radius: 3px;
-    background: var(--colorDetalhes);
+    background: #4876FF;
     font-family: 'Courier New', Courier, monospace; /*MDUAR A FONTE*/
     font-size: 1rem;
     margin: 5px 2px;
@@ -495,7 +496,7 @@ button.createbtn
 
 button.chatbtn:hover,
 button.createbtn:hover{
-    background: rgba(280,0,70,.9);
+    background: var(--colorDetalhes);
 }
 
 button.chatbtn i,
@@ -608,7 +609,7 @@ button.createbtn i{
     text-decoration: none;
 }
  #link:visited{
-    color: #e40046
+    color: #007de4
 }
  #link:hover{
     text-decoration: underline;
@@ -622,8 +623,8 @@ button.createbtn i{
        padding: 90px 15px 20px ;
     }
     .profile-img img{
-        height: 200px;
-        width: 20px;
+        height: 45vh;
+        width: 45vw;
         left: 50px;
         top:50px;
     }
@@ -654,6 +655,7 @@ button.createbtn i{
     }
 
     .profile-nav-info{
+        margin-top: 6vh;
         text-align: center;
     }
 
@@ -662,8 +664,6 @@ button.createbtn i{
     }
     .perfil-opcoes{
         right: 20px;
-        top: 75%;
-        transform: translateY(50%);
     }
 
     .main-bd{
