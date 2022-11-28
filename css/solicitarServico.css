@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(187, 187, 187);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*Letras*/
+a:link{
+    color: rgb(26, 23, 23); 
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    text-decoration: underline;
+    color: #00CDCD;
+
+}
+
+/*eletricista*/
+
+#eletricista {
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: rgb(12, 9, 9);
+    padding: 80px;
+    margin-left: 15%;
+    
+}
+
+#eletricista-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+}
+
+.eletricista {
+    width: 200%;
+    height: 100%;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    padding: 20px;
+    border-radius: 5px;
+   
+}
+
+.eletricista-tittle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.eletricista p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(7, 7, 7);
+}
+
+/*navbar*/
+#navbar {
+    width: 100%;
+    background: #02090ea9;
+    color: rgb(245, 245, 245);
+    height: 68px;
+ 
+  
+}
+
+#navbar-container {
+   width: 80%;
+   height: 100%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+#navbar-container h3 a{
+   color: #eee;
+ 
+ }
+
+#navbar-items {
+ 
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#navbar-items li a {
+    color: #eee;
+    padding: 10px;
+}
+
+/*botao eletricista*/
+.my-button{
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    background: indigo;
+    border: 0;
+    margin-top: 5%;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    margin-left: 30%;
+ }   
+
+.button {
+    display: inline-block;
+    padding: 15px 55px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: rgba(36, 30, 30, 0.5);
+    color: #eee;
+    border-radius: 5px;
+    transition: 500ms ease;
+}
+
+.button:hover{
+    cursor: pointer;
+    background: #3f3d3d;
+}
+
+.headline {
+    color: #000;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+  /*caixa de texto descrição do trabalho*/
+  .input-box {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .input-box textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    resize: none;
+    padding: 35px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    caret-color: #007bff;
+  }
+  .input-box textarea:focus,
+  .input-box textarea:valid {
+    border-color: #007bff;
+  }
+  .input-box.error textarea {
+    border-color: red;
+  }
+  .input-box textarea::placeholder{
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .input-box .title{
+      position: absolute;
+      top: 38px;
+      left: 45px;
+      color: #007bff;
+    }
+    .input-box.error .title{
+      color: red;
+    }
+    .input-box .characters{
+      position: absolute;
+      bottom: 35px;
+      right: 45px;
+      display: flex;
+      align-items: center;
+      color: #007bff;
+      display: none;
+    }
+    .input-box.active .characters{
+      display: block;
+    }
+    .input-box.error .characters{
+      color: red;
+    }
+
+
+    /*caixa de texto descrição do trabalho2*/
+
+  .input-boxx textarea {
+    width: 100%;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    resize: none;
+    padding: 35px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    caret-color: #007bff;
+  }
+  
+  .input-box textarea:valid {
+    border-color: #007bff;
+  }
+  .input-box.error textarea {
+    border-color: red;
+  }
+    .input-boxx .characterss{
+      position: absolute;
+      bottom: 35px;
+      right: 45px;
+      display: flex;
+      align-items: center;
+      color: #007bff;
+      display: none;
+    }
+
+    .input-box1{
+      display: flex;
+      flex-direction: row;
+      height: 4vh;
+      margin-left: 1%;
+    }
+    .input-box1 img {
+        width: 1.2vw;
+        height: 2.1vw;
+        border-radius: 5px;
+        box-shadow: #000;
+    }
+    

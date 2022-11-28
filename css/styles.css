@@ -20,7 +20,7 @@ a:link{
     text-decoration: none;
 }
 a:visited{
-    color: rgb(17, 11, 11);
+    color: rgb(255, 255, 255);
 }
 a:hover{
     text-decoration: underline;
