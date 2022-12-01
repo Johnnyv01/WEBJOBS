@@ -249,7 +249,7 @@ body *{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: animacao_main-login 2s;
+    animation: animacao_main-login 3s;
 }
 
 /* Animação da div */

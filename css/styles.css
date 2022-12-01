@@ -119,8 +119,7 @@ a:hover{
       color: red;
     }
 
-    /*botao eletricista*/
-    
+ /*botao eletricista*/
  .my-button{
     width: 40%;
     align-items: center;
@@ -194,6 +193,18 @@ a:hover{
 #navbar-items li a {
     color: #eee;
     padding: 10px;
+}
+
+
+
+/*Slide automatico*/
+.mySlides{
+display:none;
+width: 100%;
+margin: auto;
+padding: 20px;
+background: #eee;
+
 }
 
 /*show case*/
@@ -420,11 +431,19 @@ a:hover{
     color: rgb(240, 240, 240);
 }
 
+
+/* Animação da div */
+@keyframes animation-product {
+    0%   { width: 0%; opacity: 0; }
+    100% { width: 100%; opacity: 1; }
+}
+
 /*product*/
-#product {
+  #product  {
     background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 50px;
+    animation: animation-product 3s;
 }
 
 #product-container {
