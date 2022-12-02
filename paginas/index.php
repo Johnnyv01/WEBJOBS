@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/styles.css" type="text/css">
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <title>WEBJOBS</title>
@@ -65,9 +66,9 @@
     </div>
   </section>
 
-  <section id="features">
-    <div class="headline">O que fazemos</div>
-    <div id="features-container">
+  <section id="features" >
+    <div class="headline" >O que fazemos</div>
+    <div id="features-container"  data-aos="fade-up">
       <div class="feature">
         <i class="fa-solid fa-user-tie fa-3x"></i>
         <span class="feature-tittle">Facilidade na busca de emprego </span> <br>
@@ -93,7 +94,7 @@
 
   <section id="product">
     <div class="headline">Nosso produto</div>
-    <div id="product-container">
+    <div id="product-container"  data-aos="fade-right">
       <!--<img src="../imagens/img/iphonexr.jpg" alt="iphonexr">-->
       <div id="items">
         <div class="item">
@@ -168,8 +169,13 @@
 
 
 
+
   <script src="https://kit.fontawesome.com/71e5aa4932.js" crossorigin="anonymous"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 

@@ -432,18 +432,12 @@ background: #eee;
 }
 
 
-/* Animação da div */
-@keyframes animation-product {
-    0%   { width: 0%; opacity: 0; }
-    100% { width: 100%; opacity: 1; }
-}
 
 /*product*/
   #product  {
     background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 50px;
-    animation: animation-product 3s;
 }
 
 #product-container {
