@@ -90,7 +90,7 @@
 
   <section id="features">
     <div class="headline">O que fazemos</div>
-    <div id="features-container">
+    <div id="features-container" data-aos="fade-up">
       <div class="feature">
         <i class="fa-solid fa-user-tie fa-3x"></i>
         <span class="feature-tittle">Facilidade na busca de emprego </span> <br>
@@ -116,7 +116,7 @@
 
   <section id="product">
     <div class="headline">Nosso produto</div>
-    <div id="product-container">
+    <div id="product-container" data-aos="fade-right">
       <!--<img src="../imagens/img/iphonexr.jpg" alt="iphonexr">-->
       <div id="items">
         <div class="item">
@@ -143,7 +143,7 @@
 
   <div id="testimonials">
     <div class="headline">O que falam sobre nós</div>
-    <div id="testimonials-container">
+    <div id="testimonials-container" data-aos="zoom-in">
       <div class="testimonial">
         <p>Excelente aplicativo, solucionou meu problema com profissionais sensacionais.</p>
       </div>
@@ -155,7 +155,7 @@
 
   <section id="gallery">
     <div class="headline">Serviços Prestados</div>
-    <div id="gallery-container">
+    <div id="gallery-container" data-aos="flip-right">
 
       <h2 class="w3-center">Os melhores prestadores</h2>
 
