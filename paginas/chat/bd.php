@@ -1,7 +1,7 @@
 <?php
 
  //banco de dados servidor local xampp
-$servidor = "localhost";
+$servidor = "localhost:3307";
 $usuario = "root";
 $password = "";
 $bd = "webjobs"; 
