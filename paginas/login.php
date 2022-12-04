@@ -72,7 +72,7 @@ if (isset($_POST['cdo_email']) || isset($_POST['cdo_senha'])) {
 
   <div class="main-login">
     <div class="lado-esquerdo">
-      <h1>Faça login<br>E Encontre os melhores prestadores</h1>
+      <h1>Faça login<br>E ofereça o seus serviços a diversos contratantes</h1>
       <img class="lado-esquerdo-img" src="../imagens/entra.svg" alt="connected-world-animate">
     </div>
 

@@ -57,6 +57,7 @@ form{
 
 .inputRadio{
     font-size: 1.4em;
+    display: none;
 }
 
 .f-container-ft{
@@ -69,6 +70,27 @@ form{
     flex-direction: column;
     text-align: center;
 }
+
+
+/*Categoria */
+
+h4{text-align: center}
+
+.checkbox-card{
+	border: 1px solid #f4f4f4;
+	padding: 15px;
+}
+
+.passport-box{
+    padding: 2%;
+	display: none
+}
+
+.apply-box{
+	margin-top: 10px;
+	display: none
+}
+
 .inputs, .cpf_cnpj{
     font-size: 1.3em;
     padding: 15px 20px 5px 20px;

@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebJobs | Cadastro</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="../css/cadastroPrestador.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -84,8 +81,7 @@
             <div class="f-container">
                 <p>
                     <label for="cep">CEP</label>
-                    <input name="cdo_cep" type="text" id="cep" maxlength="9" class="inputs"
-                     onblur="pesquisacep(this.value);">
+                    <input name="cdo_cep" type="text" id="cep" maxlength="9" class="inputs" onblur="pesquisacep(this.value);">
                 </p>
                 <p>
                     <label for="rua">Rua </label>
@@ -113,28 +109,89 @@
                 </p>
             </div>
 
-            <div class="f-container2">
+            <div class="checkbox-card">
                 <h1>Escolha sua categoria</h1>
                 <div class="categoria">
-                    <input type="checkbox" id="ConstrucaoCivil" name="profissao[]" value="ConstrucaoCivil" >
-                    <label class="inputRadio" for="ConstrucaoCivil">Construção civil</label>
-                    <br><br>
-                    <input type="checkbox" id="eletricista" name="profissao[]" value="eletricista" >
-                    <label class="inputRadio" for="eletricista">Eletricista</label>
-                    <br><br>
-                    <input type="checkbox" id="servicosHidraulicos" name="profissao[]" value="servicosHidraulicos" >
-                    <label class="inputRadio" for="servicosHidraulicos">Serviços hidráulicos</label>
-                    <br><br>
-                    <input type="checkbox" id="servicosInformatica" name="profissao[]" value="servicosInformatica" >
-                    <label class="inputRadio" for="servicosInformatica">Serviços em informática</label>
-                    <br>
-
-                    <h1>Descreva suas habilidades</h1><br>
-
-                    <script src="js/cadastro/cadastroPrestador.js"></script>
+                    <label>
+                        <input type="checkbox" class="checkme"> Construcao Civil
+                        <br><br>
+                    </label>
+                    <div class="passport-box">
+                        <input type="checkbox" id="Eletricista" name="profissao[]" value="Eletricista">
+                        <label class="inputRadio" for="Eletricista"> Eletricista</label>Eletricista
+                        <br><br>
+                        <input type="checkbox" id="Pedreiro" name="profissao[]" value="Pedreiro">
+                        <label class="inputRadio" for="Pedreiro"> Pedreiro</label>Pedreiro
+                        <br><br>
+                    </div>
                 </div>
             </div>
 
+            <div class="checkbox-card">
+                <div class="categoria">
+                    <label>
+                        <input type="checkbox" class="checkme"> Manutenção Preventiva
+                        <br><br>
+                    </label>
+
+                    <div class="passport-box">
+                        <input type="checkbox" id="Mecânico Automotivo" name="profissao[]" value="Mecânico Automotivo">
+                        <label class="inputRadio" for="Mecânico Automotivo"> Mecânico Automotivo</label> Mecânico Automotivo
+                        <br><br>
+                        <input type="checkbox" id="Mecânico Industrial" name="profissao[]" value="Mecânico Industrial">
+                        <label class="inputRadio" for="Mecânico Automotivo"> Mecânico Industrial</label> Mecânico Industrial
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-card">
+                <label>
+                    <input type="checkbox" class="checkme"> Reformas e reparos
+                    <br><br>
+                </label>
+
+                <div class="passport-box">
+                    <input type="checkbox" id="Encanador" name="profissao[]" value="Encanador">
+                    <label class="inputRadio" for="Encanador">Encanador</label>Encanador
+                    <br><br>
+                    <input type="checkbox" id="Marceneiro" name="profissao[]" value="Marceneiro">
+                    <label class="inputRadio" for="Marceneiro">Marceneiro</label>Marceneiro
+                    <br><br>
+                    <input type="checkbox" id="Pintor" name="profissao[]" value="Pintor">
+                    <label class="inputRadio" for="Pintor">Pintor</label>Pintor
+                    <br><br>
+                    <input type="checkbox" id="Vidraceiro" name="profissao[]" value="Vidraceiro">
+                    <label class="inputRadio" for="Vidraceiro">Vidraceiro</label>Vidraceiro
+                    <br><br>
+                </div>
+
+            </div>
+
+
+
+
+            <script src="js/jquery-latest.min.js"></script>
+            <script>
+                $(function() {
+                    $(".checkme").click(function(event) {
+                        var x = $(this).is(':checked');
+                        if (x == true) {
+                            $(this).parents(".checkbox-card").find('.passport-box').show();
+                            $(this).parents(".checkbox-card").find('.apply-box').hide();
+                        } else {
+                            $(this).parents(".checkbox-card").find('.passport-box').hide();
+                            $(this).parents(".checkbox-card").find('.apply-box').show();
+                        }
+                    });
+                })
+            </script>
+
+
+
+            <h1>Descreva suas habilidades</h1><br>
+
+            <script src="js/cadastro/cadastroPrestador.js"></script>
             <div class="input-box">
                 <textarea placeholder="Escreva suas habilidades" name="cdo_habilidades" required></textarea>
                 <!-- <input type="text" name="cdo_habilidades" class="inputs" id="cdo_habilidades"> -->

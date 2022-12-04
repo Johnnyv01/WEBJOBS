@@ -27,39 +27,34 @@
     <div class="headline"> Serviços</div>
     <div id="services-container">
       <div class="service">
-        <i class="fa-solid fa-user-tie fa-3x"></i>
-        <span class="service-tittle">Pedreiro </span> <br>
-        <p>O pedreiro é o profissional da obra que atua na construção das etapas de fundação, paredes e acabamento. Ele deve ter conhecimento sobre o emprego de materiais, sobre ferramentas e equipamentos, sobre as técnicas utilizadas na construção, entre outros.
+      <i class="fa-solid fa-hammer"></i>
+        <span class="service-tittle">Construção civil </span> <br>
+        <h6>Pedreiro</h6><br>
+        <h6>Eletricista</h6>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-wrench"></i>
+        <span class="service-tittle">Manutenção Preventiva</span> <br>
+        <h6>Mecânico Automotivo</h6><br>
+        <h6>Mecânico Industrial</h6><br>
         </p>
       </div>
       <div class="service">
-        <i class="fa-solid fa-lock fa-3x"></i>
-        <span class="service-tittle"><a href="eletricista.php"> Eletricista </a></span> <br>
-
-        <p>Realiza manutenção preventiva e corretiva, instalação de quadros de distribuição de força e analisa
-          consumo de energia, ligação e desligamento de aparelhos elétricos e eletrônicos. Identifica defeitos
-          elétricos para reparar ou substituir componentes, ajustando peças e simulando o funcionamento dos
-          equipamentos.
-        </p>
-      </div>
-      <div class="service">
-        <i class="fas fa-layer-group fa-3x"></i>
-        <span class="service-tittle">Mecânico</span> <br>
-        <p>Faz a manutenção corretiva e preventiva em máquinas e veículos, envolvendo a troca de peças e limpeza de componentes, consertos, revisão de freios, direção, regulagem de motores e suspensão.
-        </p>
-      </div>
-      <div class="service">
-        <i class="fas fa-layer-group fa-3x"></i>
-        <span class="service-tittle">Encanador</span> <br>
-        <p>Monta, instala e conserva sistemas de tubulações de material metálico e não metálico de alta e baixa pressão para condução de ar, água, gás, vapor, esgoto, soluções químicas e outros fluídos em edifícios, laboratórios e outros locais
+      <i class="fa-solid fa-helmet-safety"></i>
+        <span class="service-tittle">Reformas e reparos</span> <br>
+        <h6>Encanador</h6><br>
+        <h6>Marceneiro</h6><br>
+        <h6>Pintor</h6><br>
+        <h6>Vidraceiro</h6><br>
         </p>
       </div>
     </div>
   </section>
 
+  <script src="https://kit.fontawesome.com/b311fa70e7.js" crossorigin="anonymous"></script>
 </body>
 
-    <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -114,7 +109,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-           MENU
+            MENU
           </h6>
           <p>
             <a href="#!" class="text-reset">Sobre nos</a>
@@ -141,7 +136,7 @@
             webjobs@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 55 9234 567 88</p>
-         
+
         </div>
         <!-- Grid column -->
       </div>

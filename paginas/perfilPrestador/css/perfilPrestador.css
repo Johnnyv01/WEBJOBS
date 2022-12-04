@@ -623,8 +623,6 @@ button.createbtn i{
        padding: 90px 15px 20px ;
     }
     .profile-img img{
-        height: 45vh;
-        width: 45vw;
         left: 50px;
         top:50px;
     }
@@ -633,11 +631,12 @@ button.createbtn i{
 @media (max-width:900px ) {
     body{
         margin: 0 20px;
+        width: 85%;
     }
 
     .profile-header{
         display: flex;
-        height: 100%;
+        height: 75%;
         flex-direction: column;
         text-align: center;
         padding-bottom: 20px;
@@ -664,6 +663,7 @@ button.createbtn i{
     }
     .perfil-opcoes{
         right: 20px;
+        margin-top: -50%;
     }
 
     .main-bd{
@@ -700,7 +700,6 @@ button.createbtn i{
         height: 30px;
         position: absolute;
         right: 15px;
-        top: 83%;
 
     }
 
