@@ -104,7 +104,6 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro = '$retorn
           <p class="mobile-no"><i class="fa fa-phone"></i>
             <?php
             echo $user_data['cdo_telefone'] . "<br>";
-            echo $user_data['cdo_id'];
             ?>
 
           </p>
@@ -173,7 +172,9 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro = '$retorn
               ?>
                 <div class="coluna">
 
-                  <img id="myImg" style="width:100%;max-width:300px" src="../perfilPrestador/<?php echo $arquivo['path']; ?>" alt="">
+                <a href="<?php echo "../perfilPrestador/".$arquivo['path']; ?>" target="_blank">
+                                        <img width="150px" ; height="150px" ; src="../perfilPrestador/<?php echo $arquivo['path']; ?>" alt="">
+                                    </a>
 
                   <?php echo date("d/m/y H:i", strtotime($arquivo['data_upload'])); ?>
                  
@@ -213,12 +214,7 @@ $sqlQuery = $conexao->query("SELECT * FROM arquivos WHERE id_cadastro = '$retorn
                   modal.style.display = "none";
                 }
               </script>
-
-
-              <!--  <div class="tabela">
-
-
-                            </div> -->
+              
             </div>
 
           </div>
