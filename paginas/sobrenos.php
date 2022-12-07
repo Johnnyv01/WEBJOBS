@@ -58,27 +58,27 @@
     <div class="headline">NOSSO TIME</div>
     <div id="devs-container">
       <div class="dev">
-        <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+        <img src="../imagens/img/jonathan-foto.jpeg" alt="" class="dev-image">
         <h1>Jonathan Vicente</h1><br>
         <h5>Desenvolvedor de Software</h5>
       </div>
       <div class="dev">
-        <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+        <img src="../imagens/img/kauan-foto.jpeg" alt="" class="dev-image">
         <h1>Kauan Alexandre</h1><br>
         <h5>Programador web</h5>
       </div>
       <div class="dev">
-        <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+        <img src="../imagens/img/gabriel-foto.jpeg" alt="" class="dev-image">
         <h1>Gabriel Freitas</h1><br>
         <h5>Analista de sistemas</h5>
       </div>
       <div class="dev">
-        <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+        <img src="../imagens/img/thais-foto.jpeg" alt="" class="dev-image">
         <h1>Thaís Huertas</h1><br>
         <h5>Analista de sistemas</h5>
       </div>
       <div class="dev">
-        <img src="../imagens/img/engenheiro.png" alt="" class="dev-image">
+        <img src="../imagens/img/rian-foto.jpeg" alt="" class="dev-image">
         <h1>Rian Neris</h1><br>
         <h5>DBA</h5>
       </div>

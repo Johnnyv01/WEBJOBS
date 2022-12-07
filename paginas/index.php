@@ -165,7 +165,7 @@
         <img class="mySlides" src="../imagens/img/mecanico.jpeg" style="width:100%">
         <img class="mySlides" src="../imagens/img/pedreiro.jpeg" style="width:100%">
       </div>
-      <h2 class="w3-center">Os melhores prestadores</h2>
+      <h2 class="w3-center">Os melhores profissionais a sua disposição</h2>
 
       <script>
         var myIndex = 0;
