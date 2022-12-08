@@ -67,8 +67,6 @@
         <div id="showcase-container">
           <h1>O PRAZER NO TRABALHO APERFEIÇOA A OBRA.</h1><br>
           <p>Encontre os melhores prestadores de serviços proximo de você!</p>
-          <!--<img src="/imagens/img/location.png"  class="location" alt="" >
-            <p>Localização atual</p>-->
           <form action="../paginas/servicosListado/servicosListado.php">
             <input name="cdo_profissao" size="50" class="search-text" placeholder="Digite o que deseja pesquisar">
             <button type="submit" class="button">Buscar</button>

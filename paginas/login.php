@@ -134,7 +134,7 @@ $var = $TudoCerto;
 
 
  <!-- Footer -->
- <footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
@@ -188,7 +188,7 @@ $var = $TudoCerto;
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-           MENU
+            MENU
           </h6>
           <p>
             <a href="#!" class="text-reset">Sobre nos</a>
@@ -208,14 +208,14 @@ $var = $TudoCerto;
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
           <p><i class="fas fa-home me-3"></i> São paulo, SP 08253-000, BR</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
             webjobs@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 55 9234 567 88</p>
-         
+
         </div>
         <!-- Grid column -->
       </div>

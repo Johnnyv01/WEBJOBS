@@ -185,8 +185,4 @@
   <!-- Copyright -->
 </footer>
 
-<div id="footer">
-  <p>Copyright 2022 - Todos os direitos reservados</p>
-</div>
-
 </html>
