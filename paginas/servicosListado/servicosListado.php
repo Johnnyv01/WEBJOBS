@@ -78,7 +78,7 @@ if (!isset($_GET['cdo_profissao'])) {
 
                     </h3>
 
-                    <h4>Categoria:
+                    <h4>Profissões:
                         <?php
                         echo $dadoss['cdo_profissao'] . "<br>";
                         ?>

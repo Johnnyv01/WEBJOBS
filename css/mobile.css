@@ -20,17 +20,7 @@
      border-bottom: 1px solid #333;
     
  }
- 
- #mvl-container {
-    font-size: 85%;
- }
- 
- /*showcase*/
- /*#showcase-container {
-    height: 38%;
-    margin: 10%;
- }*/
- 
+
  /*services*/
  #services-container {
      grid-template-columns: repeat(1, 1fr);
@@ -85,7 +75,7 @@
  
  .dev {
      width: 100%;
-     background-color: aqua;
+     background-color: rgb(255, 255, 255);
      color: #333;
  }
  
