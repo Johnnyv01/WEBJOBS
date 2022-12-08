@@ -196,7 +196,6 @@ a:hover{
 }
 
 
-
 /*Slide automatico*/
 .mySlides{
 display:none;
@@ -283,7 +282,6 @@ background: #eee;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    width: 100vw;
     margin: 4px 2px;
     cursor: pointer;
   }
@@ -552,6 +550,7 @@ background: #eee;
     width: 200px;
     border-radius: 50%;
     margin: 15px;
+   
 }
 
 /*Gallery*/
