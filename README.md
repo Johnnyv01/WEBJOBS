@@ -36,7 +36,7 @@ Desenvolvemos um site com objetivo de criar novas oportunidades para prestadores
 
 ![home](https://user-images.githubusercontent.com/86022706/206331320-1bc3501f-3008-40c8-a394-5e88ed9239d6.png)
 
-
+<br>
 
 * **Em seguida, abaixo da caixa de senha clique em Clique aqui para se cadastrar !**
 
@@ -44,7 +44,7 @@ Desenvolvemos um site com objetivo de criar novas oportunidades para prestadores
 
 ![cadastrar](https://user-images.githubusercontent.com/86022706/206331925-effde112-0f55-4143-bc38-25b25b5c2319.png)
 
-
+<br>
 
 * **Preencha o formulário com seus dados.**
 
@@ -52,7 +52,7 @@ Desenvolvemos um site com objetivo de criar novas oportunidades para prestadores
 
 ![form](https://user-images.githubusercontent.com/86022706/206332518-38ba8ed6-8d6b-4493-b89b-49080feb4e09.png)
 
-
+<br>
 
 * **Personalize seu perfil para atrair novos clientes !**
 
@@ -60,7 +60,7 @@ Desenvolvemos um site com objetivo de criar novas oportunidades para prestadores
 
 ![tela_perfil](https://user-images.githubusercontent.com/86022706/213261184-23d9d35f-d780-4397-901b-7c83ed800011.png)
 
-
+<br>
 
 Oque você pode fazer após o cadastro **[possibilidades](#📌-para-quem-é-nosso-site)**.
 
